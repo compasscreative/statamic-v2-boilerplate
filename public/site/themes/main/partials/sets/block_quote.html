@@ -1,0 +1,10 @@
+<!-- type: block_quote -->
+<section class="section-pad-sm py-12 bg-bottom bg-white-texture bg-grey-11 lozad">
+    <div class="max-w-xl feature-block text-center m-auto">
+        {{ if quote_title }}<h2 class="headline-3">{{ quote_title }}</h2>{{ /if }}
+        {{ if quote_body }}{{ quote_body | wrap:blockquote.text-3xl.mb-6.italic | markdown }}{{ /if }}
+        {{ if quote_citation }}
+        <p class="font-bold leading-relaxed uppercase">{{ quote_citation }}</p>
+        {{ /if }}
+    </div>
+</section>

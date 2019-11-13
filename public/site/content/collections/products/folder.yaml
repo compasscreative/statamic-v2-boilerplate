@@ -1,0 +1,4 @@
+title: Products
+order: number
+fieldset: entry_product
+template: product

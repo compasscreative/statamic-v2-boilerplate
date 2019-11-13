@@ -1,0 +1,82 @@
+title: 'Partial: Content Replicator'
+hide: true
+taxonomies: false
+sections:
+  main:
+    display: Main
+    fields:
+      main_content:
+        type: section
+        display: 'Main Content'
+      content_blocks:
+        type: bard
+        display: 'Content Blocks'
+        sets:
+          large_image:
+            display: 'Large Image'
+            fields:
+              large_image:
+                type: assets
+                display: 'Large Image'
+                container: main
+                folder: general
+                max_files: 1
+          gallery:
+            display: Gallery
+            fields:
+              gallery_title:
+                type: text
+                display: 'Gallery Title'
+              gallery_images:
+                type: assets
+                display: Images
+                container: main
+                folder: general
+          video:
+            display: Video
+            fields:
+              video:
+                type: video
+                display: Video
+          button:
+            display: Button
+            fields:
+              button_text:
+                type: text
+                width: 50
+                display: Button Text
+              button_url:
+                type: text
+                width: 50
+                display: Button URL
+          pdf:
+            display: PDF
+            fields:
+              pdfs:
+                mode: table
+                add_row: Add a PDF
+                fields:
+                  thumbnail:
+                    container: main
+                    folder: documents
+                    restrict: true
+                    max_files: 1
+                    mode: grid
+                    type: assets
+                    width: 25
+                    display: Thumbnail
+                  pdf_document:
+                    container: main
+                    folder: documents
+                    restrict: true
+                    max_files: 1
+                    mode: grid
+                    type: assets
+                    width: 25
+                    display: PDF Document
+                  title:
+                    type: text
+                    width: 50
+                    display: Title
+                type: grid
+                display: PDFs

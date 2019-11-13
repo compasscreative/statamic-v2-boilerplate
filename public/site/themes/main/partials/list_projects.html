@@ -1,0 +1,22 @@
+<div class="container">
+        <ul class="list-reset flex flex-wrap -mx-1">
+        {{ collection:projects limit="{limit}" sort="{sort}" slug:not="{last_segment}" }}
+        {{ if total_results > 0 }}
+        {{ if slug!=last_segment }}
+        <li class="w-1/2 p-1" itemscope itemtype="http://schema.org/Product">
+            <a class="no-underline block p-10 bg-grey-300 text-center swup-link" href="{{ url }}">
+                <h3 itemprop="name">{{ title }}</h3>
+                {{ assets:project_banner_image }}
+                <div>
+                    <img class="lazyload" data-src="{{ glide:id preset="medium" }}" alt="{{ alt }}" itemprop="description">
+                </div>
+                {{ /assets:project_banner_image }}
+            </a>
+        </li>
+        {{ /if }}
+        {{ else }}
+        <li>We haven’t posted any projects yet.</li>
+        {{ /if }}
+        {{ /collection:projects }}
+    </ul>
+</div>

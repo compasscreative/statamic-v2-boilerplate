@@ -1,0 +1,28 @@
+routes:
+  /styles: styles
+  /blog/tags: blog/taxonomies
+  /search: search
+  /users: user/index
+  /users/{username}: user/profile
+  /account: user/account
+  /login: auth/login
+  /register: auth/register
+  /forgot-password: auth/password_forgot
+  /reset-password: auth/password_reset
+  /style-guide: style-guide
+  /email-signature:
+    layout: email-signature
+  /blog/archive:
+    template: blog-archive
+    title: Blog Archive
+collections:
+  blog: '/blog/{year}/{month}/{day}/{slug}'
+  careers: '/careers/{slug}'
+  employee: '/team/{slug}'
+  products: '/products/{slug}'
+  projects: '/projects/{slug}'
+taxonomies:
+  tags: '/blog/tags/{slug}'
+  categories: '/blog/categories/{slug}'
+redirect: []
+vanity: []

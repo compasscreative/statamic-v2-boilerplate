@@ -1,0 +1,32 @@
+<{{ embed_tag or 'a'}}
+class="
+mx-auto
+py-3
+px-6
+tracking-wider
+white-space-no-wrap
+uppercase
+cursor-point
+text-sm
+transition-all
+
+{{ if embed_hollow }}
+  border
+  border-{{ embed_hollow_color or 'green' }}
+  text-{{ embed_hollow_color or 'green' }}
+  hover:border-white
+  hover:text-white
+{{ else }}
+  bg-green
+  text-white
+  hover:bg-green-active
+  focus:bg-green-active
+{{ /if }}
+
+{{ embed_styles }}
+"
+href="{{ embed_link or "/" }}"
+{{ if embed_swup_off!="true"}}data-swup-link{{ /if }}
+>
+  {{ embed_text }}
+</{{ embed_tag or 'a'}}>

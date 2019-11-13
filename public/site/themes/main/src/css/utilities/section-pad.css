@@ -1,0 +1,49 @@
+.section-pad {
+  @apply py-10;
+
+  &-t {
+    @apply pt-10;
+  }
+
+  &-b {
+    @apply pb-10;
+  }
+
+  &-sm {
+    @apply py-5;
+  }
+
+  &-sm-t {
+    @apply pt-5;
+  }
+
+  &-sm-b {
+    @apply pb-5;
+  }
+}
+
+@screen lg {
+  .section-pad {
+    @apply py-20;
+
+    &-t {
+      @apply pt-20;
+    }
+
+    &-b {
+      @apply pb-20;
+    }
+
+    &-sm {
+      @apply py-10;
+    }
+
+    &-sm-t {
+      @apply pt-10;
+    }
+
+    &-sm-b {
+      @apply pb-10;
+    }
+  }
+}

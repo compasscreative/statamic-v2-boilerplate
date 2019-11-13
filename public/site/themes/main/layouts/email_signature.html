@@ -1,0 +1,533 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>{{ site_name }} - Signature Generator</title>
+    <style type="text/css">
+
+        body
+        {
+            font: normal 14px/18px sans-serif;
+            min-width: 320px;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .form_wrap
+        {
+            background: #eee;
+            overflow: hidden;
+            padding-top: 20px;
+        }
+
+        h1
+        {
+            margin: 50px 0 0 50px;
+            padding: 0 0 0 10px;
+            font: bold 24px/28px sans-serif;
+        }
+
+        form
+        {
+            padding: 0 5% 0;
+            overflow: hidden;
+            max-width: 500px;
+        }
+
+        form ul
+        {
+            padding-bottom: 20px;
+            overflow: hidden;
+        }
+
+        form li
+        {
+            list-style: none;
+            padding: 12px 0 0;
+            display: block;
+            float: left;
+            clear: both;
+            width: 100%;
+        }
+
+        label
+        {
+            width: 20%;
+            float: left;
+            clear: both;
+            text-align: right;
+            padding: 4px 10px 4px 0;
+        }
+
+        input, button, select
+        {
+            float: left;
+            clear: none;
+        }
+
+        input
+        {
+            width: 70%;
+            padding: 4px 5px;
+        }
+
+        input:focus
+        {
+            background: #ffffde;
+        }
+
+        form h2
+        {
+            color: #444;
+            text-transform: uppercase;
+            font: bold 15px/18px sans-serif;
+        }
+
+        .alert
+        {
+            margin: 40px 0 20px 40px;
+            clear: both;
+            float: left;
+            padding: 10px 15px;
+            color: #34ab00;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+
+        .email,
+        .office,
+        .mobile,
+        .address,
+        .website,
+        .fax,
+        .facebook,
+        .twitter,
+        .youtube,
+        .flickr,
+        .linkedin,
+        .houzz,
+        .instagram
+        {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+        $(document).ready(function()
+        {
+
+            /*
+            |--------------------------------------------------------------------------
+            | Name
+            |--------------------------------------------------------------------------
+            */
+                 $('#name').keyup(function()
+                 {
+                     // Get value
+                     var value = $(this).val();
+
+                     // Trim value
+                     value = $.trim(value);
+
+                     // Update signature
+                     $('.name').html(value);
+                 });
+
+            /*
+            |--------------------------------------------------------------------------
+            | Title
+            |--------------------------------------------------------------------------
+            */
+                 $('#title').keyup(function()
+                 {
+                     // Get value
+                     var value = $(this).val();
+
+                     // Trim value
+                     value = $.trim(value);
+
+                     // Update signature
+                     $('.title').html(value);
+                 });
+
+            /*
+            |--------------------------------------------------------------------------
+            | Country
+            |--------------------------------------------------------------------------
+            */
+                 // $('#country').change(function()
+                 // {
+                 //     // Get value
+                 //     var value = $(this).val();
+
+                 //     // Prepare name
+                 //     if (value.length === 0)
+                 //     {
+                 //         value = 'Mission Aviation Fellowship';
+                 //     }
+                 //     else
+                 //     {
+                 //         value = 'Mission Aviation Fellowship of ' + value;
+                 //     }
+
+                 //     // Update signature
+                 //     $('.country').html(value);
+
+                 // });
+
+            /*
+            |--------------------------------------------------------------------------
+            | Email
+            |--------------------------------------------------------------------------
+            */
+                 $('#email').keyup(function()
+                 {
+                     // Get value
+                     var value = $(this).val();
+
+                     // Trim value
+                     value = $.trim(value);
+
+                     // Check if set
+                     if (value.length === 0)
+                     {
+                         $('.email').hide();
+                         return;
+                     }
+
+                     // Update signature
+                     $('.email').show();
+                     $('.email').find('a').attr('href', 'mailto:' + value);
+                     $('.email').find('a').find('span').html(value);
+                 });
+
+            /*
+            |--------------------------------------------------------------------------
+            | Mobile
+            |--------------------------------------------------------------------------
+            */
+                 $('#mobile').keyup(function()
+                 {
+                     // Get value
+                     var value = $(this).val();
+
+                     // Trim value
+                     value = $.trim(value);
+
+                     // Check if set
+                     if (value.length === 0)
+                     {
+                         $('.mobile').hide();
+                         return;
+                     }
+
+                     // Update signature
+                     $('.mobile').show();
+                     $('.mobile').find('a').attr('href', 'tel:' + value);
+                     $('.mobile').find('a').find('span').html(value);
+                 });
+
+            /*
+            |--------------------------------------------------------------------------
+            | Office
+            |--------------------------------------------------------------------------
+            */
+                 $('#office').keyup(function()
+                 {
+                     // Get value
+                     var value = $(this).val();
+
+                     // Trim value
+                     value = $.trim(value);
+
+                     // Check if set
+                     if (value.length === 0)
+                     {
+                         $('.office').hide();
+                         return;
+                     }
+
+                     // Update signature
+                     $('.office').show();
+                     $('.office').find('a').attr('href', 'tel:' + value);
+                     $('.office').find('a').find('span').html(value);
+                 });
+
+            /*
+            |--------------------------------------------------------------------------
+            | Fax
+            |--------------------------------------------------------------------------
+            */
+                 $('#fax').keyup(function()
+                 {
+                     // Get value
+                     var value = $(this).val();
+
+                     // Trim value
+                     value = $.trim(value);
+
+                     // Check if set
+                     if (value.length === 0)
+                     {
+                         $('.fax').hide();
+                         return;
+                     }
+
+                     // Update signature
+                     $('.fax').show();
+                     $('.fax').find('a').attr('href', 'tel:' + value);
+                     $('.fax').find('a').find('span').html(value);
+                 });
+
+            /*
+            |--------------------------------------------------------------------------
+            | Website
+            |--------------------------------------------------------------------------
+            */
+                 $('#website').keyup(function()
+                 {
+                     // Get value
+                     var value = $(this).val();
+
+                     // Trim value
+                     value = $.trim(value);
+
+                     // Remove http://
+                    if(value.match(/http:\/\//))
+                    {
+                        value = value.substring(7);
+                    }
+
+                    // Remove trailing slash
+                    if(value.substr(-1) === '/')
+                    {
+                        value = value.substr(0, value.length - 1);
+                    }
+
+                     // Check if set
+                     if (value.length === 0)
+                     {
+                         $('.website').hide();
+                         return;
+                     }
+
+                     // Update signature
+                     $('.website').show();
+                     $('.website').find('a').attr('href', 'http://' + value);
+                     $('.website').find('a').find('span').html(value);
+                 });
+
+            /*
+            |--------------------------------------------------------------------------
+            | Addresss
+            |--------------------------------------------------------------------------
+            */
+                 $('#address, #city, #province, #postalcode').keyup(function()
+                 {
+                     // Get value
+                    var address = $.trim($('#address').val());
+                    var city = $.trim($('#city').val());
+                    var province = $.trim($('#province').val());
+                    var postalcode = $.trim($('#postalcode').val());
+
+                     // Check if address is set
+                     if (address.length === 0)
+                     {
+                         $('.address').hide();
+                         return;
+                     }
+
+                     // Prepare address
+                     if (city.length) address += ', ' + city;
+                     if (province.length) address += ', ' + province;
+                     if (postalcode.length) address += '&nbsp;&nbsp;' + postalcode;
+
+                     // Update signature
+                     $('.address').html(address).show();
+                 });
+
+            /*
+            |--------------------------------------------------------------------------
+            | Social Media
+            |--------------------------------------------------------------------------
+            */
+                 $('#facebook, #twitter, #youtube, #flickr, #linkedin, #instagram').keyup(function()
+                 {
+                     // Get value
+                     var value = $(this).val();
+
+                     // Get name
+                     var name = $(this).attr('id');
+
+                     // Trim value
+                     value = $.trim(value);
+
+                     // Check if address is set
+                     if (value.length === 0)
+                     {
+                         $('.' + name).hide();
+                         return;
+                     }
+
+                     // Prepare url
+                     var url = 'https://' + name + '.com/' + value;
+
+                     // Update signature
+                     $('.' + name).attr('href', url).show();
+                 });
+
+                 $('#houzz').keyup(function()
+                 {
+                     // Get value
+                     var value = $(this).val();
+
+                     // Get name
+                     var name = $(this).attr('id');
+
+                     // Trim value
+                     value = $.trim(value);
+
+                     // Check if address is set
+                     if (value.length === 0)
+                     {
+                         $('.' + name).hide();
+                         return;
+                     }
+
+                     // Prepare url
+                     var url = 'https://' + name + '.com/pro/' + value;
+
+                     // Update signature
+                     $('.' + name).attr('href', url).show();
+                 });
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="form_wrap">
+    <h1>{{ site_name }} &raquo; Email Signature Generator</h1>
+    <form class="form" method="post" autocomplete="off">
+        <ul>
+            <li>
+                <h2>Contact Information</h2>
+            </li>
+            <li>
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" placeholder="Your first and last name." />
+            </li>
+
+            <li>
+                <label for="title">Title</label>
+                <input type="text" id="title" name="title" placeholder="Your job title" />
+            </li>
+
+            <li>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="ie. {{ primary_email }}" />
+            </li>
+
+            <li>
+                <label for="office">Office Phone</label>
+                <input type="text" id="office" name="office" placeholder="ie. +1 (555) 555-5555" />
+            </li>
+
+            <li>
+                <label for="mobile">Mobile Phone</label>
+                <input type="text" id="mobile" name="mobile" placeholder="ie. +1 (555) 555-5555" />
+            </li>
+
+            <li>
+                <label for="fax">Fax</label>
+                <input type="text" id="fax" name="fax" placeholder="ie. +1 (555) 555-5555" />
+            </li>
+            <li>
+                <label for="website">Website</label>
+                <input type="text" id="website" name="website" placeholder="ie. {{ site_url }}" />
+            </li>
+            <li>
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="ie. 23 King St." />
+            </li>
+
+            <li>
+                <label for="city">City</label>
+                <input type="text" id="city" name="city" placeholder="ie. New York" />
+            </li>
+
+            <li>
+                <label for="province">Prov / State</label>
+                <input type="text" id="province" name="province" placeholder="ie. New York" />
+            </li>
+
+            <li>
+                <label for="postalcode">Code / ZIP</label>
+                <input type="text" id="postalcode" name="postalcode" placeholder="ie. L2N 1Y7" />
+            </li>
+        </ul>
+        <ul class="social">
+            <li><h2>Social Media Usernames</h2></li>
+            <li><small>Enter your username only, not the full url.</small></li>
+            <li>
+                <label for="facebook">Facebook</label>
+                <input type="text" id="facebook" name="facebook" placeholder="ie. {{ site_name | slugify }}" />
+            </li>
+            <li>
+                <label for="twitter">Twitter</label>
+                <input type="text" id="twitter" name="twitter" placeholder="ie. {{ site_name | slugify }}" />
+            </li>
+            <li>
+                <label for="youtube">Youtube</label>
+                <input type="text" id="youtube" name="youtube" placeholder="ie. {{ site_name | slugify }}" />
+            </li>
+            <li>
+                <label for="flickr">Flickr</label>
+                <input type="text" id="flickr" name="flickr" placeholder="ie. {{ site_name | slugify }}" />
+            </li>
+            <li>
+                <label for="linkedin">LinkedIn</label>
+                <input type="text" id="linkedin" name="linkedin" placeholder="ie. {{ site_name | slugify }}" />
+            </li>
+            <li>
+                <label for="instagram">Instagram</label>
+                <input type="text" id="instagram" name="instagram" placeholder="ie. {{ site_name | slugify }}" />
+            </li>
+            <li>
+                <label for="houzz">Houzz</label>
+                <input type="text" id="houzz" name="houzz" placeholder="ie. {{ site_name | slugify }}" />
+            </li>
+        </ul>
+    </form>
+    <h3 class="alert">When completed, select and copy the below signature. Then paste into your email client.</h3>
+</div>
+
+<table cellpadding="50" cellspacing="0" border="0">
+    <tr>
+        <td>
+            <p style="margin:10px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:16px; line-height:20px; font-weight:bold;"><span class="name">Your name</span>&nbsp;&nbsp;<span style="color:#000000; font-size:10px; line-height:15px; text-transform: uppercase;" class="title">Title</span></p>
+            <p class="email" style="margin:2px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; color:#6f6f6f; font-size:13px; line-height:18px; font-weight:normal;"><b>Email:</b> <a href="" style="color:#000000; text-decoration:none;"><span style="color:#000000; text-decoration:none;"></span></a></p>
+            <p class="office" style="margin:2px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; color:#6f6f6f; font-size:13px; line-height:18px; font-weight:normal;"><b>Office:</b> <a href="" style="color:#000000; text-decoration:none;"><span style="color:#000000; text-decoration:none;"></span></a></p>
+            <p class="mobile" style="margin:2px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; color:#6f6f6f; font-size:13px; line-height:18px; font-weight:normal;"><b>Mobile:</b> <a href="" style="color:#000000; text-decoration:none;"><span style="color:#000000; text-decoration:none;"></span></a></p>
+            <p style="margin:15px 0px 0px 0px;"><img src="{{ site_url }}site/themes/main/img/logo.png" width="182" border="0"></p>
+            <p class="address" style="margin:0px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:13px; line-height:18px; font-weight:normal;"></p>
+            <p class="website" style="margin:5px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; color:#000000; font-size:13px; line-height:15px; font-weight:normal;"><b> <a href="" style="color:#000000; text-decoration:none;"><span style="color:#7e7e7e; text-decoration:none;"></span></a></b></p>
+            <p class="fax" style="margin:8px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; color:#6f6f6f; font-size:13px; line-height:18px; font-weight:normal;"><b>Fax:</b> <a href="" style="color:#000000; text-decoration:none;"><span style="color:#000000; text-decoration:none;"></span></a></p>
+            <p style="margin: 0px 0px 0px 0px; padding: 0px 0px 0px 0px; font-family:Arial, Helvetica, sans-serif; color:#6f6f6f;">
+            <a class="facebook" style="color: #000000; text-decoration: none;" href=""><img style="padding: 10px 7px 0px 0px; position: relative; top: 5px;" src="{{ site_url }}site/themes/main/img/email-signature/facebook.png" alt="facebook" border="0" width="27" height="27" /></a>
+            <a class="twitter" style="color: #000000; text-decoration: none;" href=""><img style="padding: 10px 7px 0px 0px; position: relative; top: 5px;" src="{{ site_url }}site/themes/main/img/email-signature/twitter.png" alt="twitter" border="0" width="27" height="27" /></a>
+            <a class="youtube" style="color: #000000; text-decoration: none;" href=""><img style="padding: 10px 7px 0px 0px; position: relative; top: 5px;" src="{{ site_url }}site/themes/main/img/email-signature/youtube.png" alt="youtube" border="0" width="27" height="27" /></a>
+            <a class="houzz" style="color: #000000; text-decoration: none;" href=""><img style="padding: 10px 7px 0px 0px; position: relative; top: 5px;" src="{{ site_url }}site/themes/main/img/email-signature/houzz.png" alt="houzz" border="0" width="27" height="27" /></a>
+            <a class="flickr" style="color: #000000; text-decoration: none;" href=""><img style="padding: 10px 7px 0px 0px; position: relative; top: 5px;" src="{{ site_url }}site/themes/main/img/email-signature/flickr.png" alt="flickr" border="0" width="27" height="27" /></a>
+            <a class="linkedin" style="color: #000000; text-decoration: none;" href=""><img style="padding: 10px 7px 0px 0px; position: relative; top: 5px;" src="{{ site_url }}site/themes/main/img/email-signature/linkedin.png" alt="linkedin" border="0" width="27" height="27" /></a>
+            <a class="instagram" style="color: #000000; text-decoration: none;" href=""><img style="padding: 10px 7px 0px 0px; position: relative; top: 5px;" src="{{ site_url }}site/themes/main/img/email-signature/instagram.png" alt="instagram" border="0" width="27" height="27" /></a>
+            </p>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

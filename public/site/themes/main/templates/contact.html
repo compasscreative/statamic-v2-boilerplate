@@ -1,0 +1,28 @@
+{{ partial:page_hero }}
+
+{{ partial:content_blocks }}
+
+<div class="container">
+
+
+    <dl class="mb-5" itemprop="address" itemscope itemtype="http://schema.org/LocalBusiness">
+        <dt>Phone</dt>
+        <dd><span itemprop="telephone"><a href="tel:{{ primary_phone | tel }}">{{ primary_phone }}</a></span></dd>
+        <dt>Email</dt>
+        <dd><a itemprop="email"
+                href="mailto:{{ primary_email | obfuscate_email }}">{{ primary_email | obfuscate_email }}</a></dd>
+    </dl>
+
+    <h2>Located in {{ serving_area }}</h2>
+    <address class="mb-5" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <span itemprop="streetAddress">{{ primary_address }}</span> <br>
+        <span itemprop="postalLocality">{{ primary_city }}</span>, <span
+            itemprop="postalRegion">{{ primary_province }}</span> <br>
+        <span itemprop="postalCode">{{ primary_postal_code | widont }}</span>
+    </address>
+
+</div>
+
+{{ partial:form heading="Send us a message" }}
+
+{{ partial:map }}

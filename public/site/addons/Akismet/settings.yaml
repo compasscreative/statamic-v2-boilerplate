@@ -1,0 +1,22 @@
+fields:
+  akismet_key:
+    type: text
+    validate: required
+  roles:
+    type: user_roles
+    instructions: Add roles that are allowed to access the Spam Queue
+  form_fields_section:
+    type: section
+    display: Form & Fields
+  forms:
+    type: grid
+    display: ' '
+    fields:
+      form_and_fields:
+        type: akismet
+        display: 'Form & Fields'
+        instructions: "Please add one row at a time, saving each time (there's an issue)"
+        validate: required
+    mode: table
+    min_rows: "1"
+    add_row: Add Form

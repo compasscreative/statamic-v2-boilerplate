@@ -1,0 +1,40 @@
+title: Contact
+honeypot: comment
+fields:
+  name:
+    display: Name
+    validate: required|min:2
+    required: true
+    placeholder: Your name
+  email:
+    display: Email
+    validate: required|email
+    required: true
+    placeholder: you@email.com
+  phone:
+    display: Phone
+    placeholder: (555) 555-5555
+  location:
+    display: Location
+    placeholder: City, State / Prov
+  message:
+    display: Message
+    type: textarea
+columns:
+  - name
+  - email
+metrics:
+  -
+    type: total
+    label: Total Submissions
+email:
+  -
+    to: '{{ env:NOTIFY_EMAIL default="hosting@compasscreative.ca" }}'
+    reply_to: '{{ email }}'
+    subject: 'New form submission from {{ name }}'
+    template: notify-admin
+  -
+    reply_to: '{{ env:NOTIFY_EMAIL default="hosting@compasscreative.ca" }}'
+    to: '{{ email }}'
+    subject: 'Your message to {{ site_name }}'
+    template: notify-customer

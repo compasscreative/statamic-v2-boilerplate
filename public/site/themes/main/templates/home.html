@@ -1,0 +1,46 @@
+{{ partial:page_hero }}
+
+<div class="container section-pad lg:flex">
+    {{ value_stack }}
+    <div class="py-4 lg:px-4 lg:w-1/3">
+        {{ heading | wrap:h2 }}
+        {{ copy | wrap:div.py-4 }}
+        {{ assets:image }}
+        <img src="{{ glide:id preset="md" }}"
+            srcset="{{ glide:id preset="md" }} 800w, {{ glide:id preset="lg" }} 1600w, {{ glide:id preset="xl" }} 2400w"
+            alt="{{ alt or title }}">
+        {{ /assets:image }}
+    </div>
+    {{ /value_stack }}
+</div>
+
+{{ plan_heading | wrap:h2.text-center }}
+
+<div class="container section-pad lg:flex">
+    {{ plan_steps }}
+    <div class="py-4 lg:px-4 lg:w-1/3">
+        {{ heading | wrap:h2 }}
+        {{ copy | wrap:div.py-4 }}
+        {{ assets:image }}
+        <img class="lazyload" data-src="{{ glide:id preset="md" }}"
+            data-srcset="{{ glide:id preset="md" }} 800w, {{ glide:id preset="lg" }} 1600w, {{ glide:id preset="xl" }} 2400w"
+            alt="{{ alt or title }}">
+        {{ /assets:image }}
+    </div>
+    {{ /plan_steps }}
+</div>
+
+<div class="container section-pad">
+
+    <div class="pb-10">
+        <h2 class="text-center">Products and Services</h2>
+        {{ partial:list_products limit="2" sort="date" }}
+    </div>
+    {{ partial:default-content }}
+    <div>
+        <h2 class="text-center">Featured Projects</h2>
+        {{ partial:list_projects limit="2" sort="date" }}
+    </div>
+</div>
+
+{{ partial:form }}

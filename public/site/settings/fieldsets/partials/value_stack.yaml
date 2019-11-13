@@ -1,0 +1,19 @@
+title: 'Partial: Value Stack'
+create_title: Home
+hide: true
+taxonomies: false
+fields:
+  value_stack:
+    type: grid
+    instructions: What the company offers
+    mode: stacked
+    display: Value Stack
+    fields:
+      heading:
+        type: text
+      copy:
+        type: textarea
+      image:
+        type: assets
+        container: main
+        max_files: 1

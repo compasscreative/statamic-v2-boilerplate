@@ -1,0 +1,7 @@
+settings:
+  system:
+    locales:
+      en:
+        full: en_US
+        name: English
+        url: http://statamic.compasscreative.biz

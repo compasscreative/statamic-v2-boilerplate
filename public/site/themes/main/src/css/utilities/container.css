@@ -1,0 +1,9 @@
+.container {
+  @apply px-4 mx-auto;
+}
+
+.container {
+  @screen md {
+    @apply px-8;
+  }
+}

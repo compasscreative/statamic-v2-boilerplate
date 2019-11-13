@@ -1,0 +1,37 @@
+title: 'Partial: Page Hero'
+hide: true
+taxonomies: false
+fields:
+  main_banner:
+    type: section
+    display: Banner
+  banner:
+    type: assets
+    display: Image
+    container: main
+    folder: banners
+    max_files: 1
+  pre_heading:
+    type: text
+    instructions: Optional, small text above title
+    display: Pre-Heading
+  heading:
+    type: text
+    instructions: Optional, replaces title of page
+    display: Heading
+  intro:
+    type: textarea
+    display: Intro
+  call_to_action:
+    type: text
+    display: Call to Action
+    instructions: Optional
+    width: 50
+  link:
+    type: pages
+    display: Call to Action Link
+    instructions: Leave blank to link to form at bottom of page
+    depth: "1"
+    max_items: 1
+    mode: tags
+    width: 50

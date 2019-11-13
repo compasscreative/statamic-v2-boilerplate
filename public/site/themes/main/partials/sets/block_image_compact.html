@@ -1,0 +1,18 @@
+<!-- type: {{type}} -->
+<section
+    class="feature-block type-{{type}} flex relative bg-green-medium bg-cover bg-no-repeat lozad {{ photo_classes }} {{ if block_copy_position == "right" }}flex-row-reverse{{ else }}flex-row{{ /if }}"
+    {{ assets:photo_primary }}data-background-image="{{ glide:id width="2100" height="900" fit="focal_crop" }}"
+    {{ /assets:photo_primary }}>
+    {{# note the .flex-row-reverse thing isn't 'block aware'. Just need it aligned rt #}}
+    <div class="flex flex-row-reverse sm:w-full md:w-2/3 lg:w-1/2 feature-block--copy">
+        <div class="max-w-md">
+            <h3 class="headline-serif text-4xl mb-6">{{ title | windont }}</h3>
+            <div class="mb-6 w-1/3 border-b-2 border-amber-dark"></div>
+            {{ if block_content }}{{ block_content | wrap:p.mb-4.text-xl | markdown  }}{{ /if }}
+            {{ if button_label }}
+            <a class="link"
+                href="{{ if page_or_anchor == "anchor" }}#{{ anchor_id }}{{ else }}{{ relate:button_link }}{{ url }}{{ /relate:button_link }}{{ /if }}">{{ button_label }}</a>
+            {{ /if }}
+        </div>
+    </div>
+</section>

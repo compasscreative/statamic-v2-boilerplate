@@ -1,0 +1,35 @@
+title: 'Partial: Search & Social'
+hide: true
+taxonomies: false
+fields:
+  search_and_social:
+    type: section
+    display: 'Search & Social'
+    instructions: |
+      Specify the image, title, and description which will be suggested to social sites such as Facebook, and Twitter as well as search engines.
+
+      _If this section is left blank, we'll fallback to the default title, featured image, and truncated verision of any content._
+  seo_image:
+    type: assets
+    display: Image
+    folder: general
+    max_files: 1
+    width: 25
+    container: main
+  seo_title:
+    type: text
+    display: Title
+    instructions: '50 - 60 characters is optimal.'
+  seo_description:
+    type: textarea
+    display: Description
+    instructions: '150 - 160 characters is optimal.'
+  slug:
+    display: Slug
+    type: text
+    instructions: |
+      Text that shows in the browsers address bar.
+
+      ie: /[this-page]
+
+      Use hyphens to separate words, no spaces or weird characters, thanks!

@@ -1,0 +1,81 @@
+title: Default Globals
+hide: true
+taxonomies: false
+fields:
+  site_name:
+    type: text
+    display: Website Name
+  serving_area:
+    type: text
+    display: Serving area
+    instructions: Name of the area that you service
+  primary_phone:
+    type: text
+    display: Main phone number
+  primary_email:
+    type: text
+    display: Main email address
+  primary_address:
+    type: text
+    display: Primary Address
+  primary_city:
+    type: text
+    display: City
+  primary_province:
+    type: text
+    display: Province
+  primary_postal_code:
+    type: text
+    display: Postal Code
+  email_customer_message:
+    type: markdown
+    display: Email customer message
+    instructions: This is the message that will be automatically sent by email to customers who submit a contact form.
+    cheatsheet: true
+  office_hours:
+    type: grid
+    display: Office Hours
+    fields:
+      day:
+        type: text
+        display: Day
+      opens:
+        type: time
+        display: Opens
+        default: 09:00
+      closes:
+        type: time
+        display: Closes
+        default: 17:00
+      closed:
+        type: checkboxes
+        display: Closed
+        options:
+          True: Closed
+    mode: table
+    max_rows: "7"
+    min_rows: "7"
+  social_profiles:
+    type: grid
+    display: Social Profiles
+    fields:
+      social_profile_name:
+        type: text
+        display: Name
+      social_profile_link:
+        type: text
+        display: Link
+    mode: table
+    add_row: Add Profile
+  office_latitude:
+    type: text
+    display: Office Latitude
+  office_longitude:
+    type: text
+    display: Office Longitude
+  head_tags:
+    type: textarea
+    display: Add tags here to be placed in the document head
+  gtm_id:
+    type: text
+    display: Google Tagmanager ID

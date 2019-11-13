@@ -1,0 +1,13 @@
+<input
+    class="js-form-input p-3 w-full placeholder-blue"
+    type="{{ embed_type or 'text' }}"
+    name="{{ embed_name }}"
+    id="{{ embed_id }}"
+    value="{{ old }}"
+    placeholder="{{ embed_placeholder }}"
+    data-placeholder="{{ embed_placeholder }}"
+    autocomplete="{{ embed_autocomplete or embed_name }}"
+    {{ embed_multiple | ?: multiple: }}
+    {{ embed_required | ?: required: }}
+    {{ embed_readonly | ?: readonly: }}
+/>

@@ -1,0 +1,21 @@
+settings:
+  caching:
+    stache_always_update: true
+  debug:
+    debug: true
+    debug_bar: false
+  system:
+    locales:
+      en:
+        full: en_US
+        name: English
+        url: http://local.statamic-boilerplate.com
+  email:
+    driver: smtp
+    from_email: ce3521aca8-53214c@inbox.mailtrap.io
+    from_name: Mail Trap
+    host: smtp.mailtrap.io
+    port: '2525'
+    encryption: tls
+    username: 1328c5409d8b09
+    password: 73140a0994750a

@@ -1,0 +1,23 @@
+{{ partial:page_hero }}
+
+<div class="container">
+
+    <article>
+
+        {{ partial:content_blocks }}
+
+        <div>
+            <ul>
+                {{ collection:careers }}
+                {{ if total_results > 0 }}
+                <li><a href="{{ url }}">{{ title }}</a></li>
+                {{ else }}
+                <li>We’re busy, but not looking to hire at the moment. Sorry!</li>
+                {{ /if }}
+                {{ /collection:careers }}
+            </ul>
+        </div>
+
+    </article>
+
+</div>

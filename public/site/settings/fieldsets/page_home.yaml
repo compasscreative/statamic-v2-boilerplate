@@ -1,0 +1,32 @@
+title: 'Page: Home'
+create_title: Home
+hide: true
+taxonomies: false
+sections:
+  main:
+    display: Main
+    fields:
+      page_hero:
+        type: partial
+        display: Banner
+        fieldset: partial_page_hero
+      value_stack:
+        type: partial
+        fieldset: partials/value_stack
+      plan:
+        type: partial
+        fieldset: partials/plan
+  options:
+    display: Options
+    fields:
+      slug:
+        type: text
+        width: 33
+      search_and_social:
+        type: partial
+        display: 'Search & Social'
+        fieldset: partial_search_and_social
+      show_in_nav:
+        type: partial
+        display: Show in Nav
+        fieldset: partial_show_in_nav

@@ -1,0 +1,9 @@
+<ul class="list-reset text-center">
+    {{ collection:careers }}
+        {{ if total_results > 0 }}
+            <li class="py-2"><a href="{{ url }}">{{ title }}</a></li>
+        {{ else }}
+            <li class="py-2">We’re busy, but not looking to hire at the moment. Sorry!</li>
+        {{ /if }}
+    {{ /collection:careers }}
+</ul>

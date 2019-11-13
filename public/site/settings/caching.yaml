@@ -1,0 +1,6 @@
+stache_always_update: false
+cache_tags_enabled: true
+static_caching_enabled: false
+static_caching_lock_hold_length: 0
+stache_lock_enabled: true
+stache_lock_wait_length: 30

@@ -1,0 +1,20 @@
+<div class="photoswipe-gallery mx-auto max-w-4xl flex flex-wrap -mx-1 section-pad-b" itemscope itemtype="http://schema.org/ImageGallery">
+    {{ assets:gallery }}
+    <figure class="w-1/2 md:w-1/3 lg:w-1/4 p-1" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+        <a itemprop="contentUrl"
+            {{ glide:generate src="{id}" height="1200" }}
+            href="{{ url }}"
+            data-size="{{ width }}x{{ height }}"
+            {{ /glide:generate }}
+            title="{{ alt or filename }}"
+            data="no-swup"
+            >
+            <img
+                class="lozad block"
+                data-src="{{ glide:id width="400" height="400" }}"
+                data-srcset="{{ glide:id width="400" height="400" }} 400w, {{ glide:id width="800" height="800" }} 800w,"
+                itemprop="thumbnail" alt="{{ alt or filename }}" />
+        </a>
+    </figure>
+    {{ /assets:gallery }}
+</div>

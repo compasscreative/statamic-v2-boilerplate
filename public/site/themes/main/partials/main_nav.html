@@ -1,0 +1,57 @@
+<div class="z-50 w-16 fixed top-0 right-0 lg:hidden p-2">
+    <a class="js-burger-trigger block p-2 bg-black" href="#" style="-webkit-tap-highlight-color: transparent">
+        <div class="js-burger-trigger--first-child border-white relative border-b-2 mb-2 transition-all"></div>
+        <div class="js-burger-trigger--second-child border-white relative border-b-2 mb-2 transition-all"></div>
+        <div class="js-burger-trigger--third-child border-white relative border-b-2 transition-all"></div>
+    </a>
+</div>
+
+<nav class="
+        js-main-nav
+        bg-black text-white absolute h-1 inset-0 uppercase p-2 opacity-0 transition-all overflow-hidden z-40
+        lg:bg-transparent lg:h-auto lg:ml-auto lg:relative lg:opacity-100 lg:pr-2 lg:py-2 lg:block lg:flex lg:order-2 lg:overflow-visible lg:pl-10
+        "
+        role="Main navigation"
+        >
+    <ul class="
+    flex
+    flex-wrap
+    justify-between
+    pt-5
+    w-full
+    lg:tracking-wide lg:bg-transparent lg:text-black lg:items-baseline
+    ">
+    {{ nav from="/" show_in_main_nav:is="true" }}
+    <li class="w-full lg:w-auto lg:pr-4">
+        <a class="
+            inline-block
+            p-1
+            no-underline
+            hover:text-grey-700
+            "
+            data-swup-link
+            data-swup-preload
+        href="{{ url }}">{{ title }}</a>
+    </li>
+    {{ /nav }}
+    <li class="w-full lg:w-auto py-4 px-1">
+        {{ partial:button embed_link="/contact" embed_text="Request a Quote" }}
+    </li>
+    {{ nav from="/" show_in_main_nav:not="true" and show_in_footer_nav="true" }}
+    {{ if first }}
+    <li class="block lg:hidden w-full border-t my-5 opacity-25"></li>
+    {{ /if }}
+    <li class="block lg:hidden w-1/2">
+        <a class="
+            block
+            w-full
+            no-underline
+            text-xs
+            mb-2
+            hover:text-grey-700
+            "
+        href="{{ url }}">{{ title }}</a>
+    </li>
+    {{ /nav }}
+    </ul>
+</nav>

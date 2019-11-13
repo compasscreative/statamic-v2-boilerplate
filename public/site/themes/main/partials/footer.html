@@ -1,0 +1,39 @@
+<footer class="section-pad bg-grey-light">
+
+    <div class="container text-center ">
+
+        <div class="w-40 mx-auto mb-8">
+            <a class="no-underline relative block text-base aspect-ratio-site-logo" title="Go to Home" data-swup-link data-swup-preload href="/">
+                {{ partial:logo embed_fill="text-white" embed_fill_2="text-gray-200" }}
+            </a>
+        </div>
+
+        <nav class="text-center w-full mb-8">
+            <ul class="list-reset flex justify-center uppercase text-gray-200 tracking-wider text-sm">
+                {{ nav from="/" show_in_footer_nav:is="true" }}
+                <li class=""><a class="px-4" data-swup-link href="{{ url }}">{{ title }}</a></li>
+                {{ /nav }}
+            </ul>
+        </nav>
+
+        <div class="w-full">
+            {{ partial:social_profile_links }}
+        </div>
+
+        <section class="w-full section-pad">
+            <ul class="list-reset text-xs">
+                <li class="">
+                    <a href="/" data-swup-link>&copy; 2019-{{ now format="Y" }} {{ site_name }}</a>
+                </li>
+                <li class="">
+                    <a href="https://compasscreative.ca" class="">Landscaping Website by Compass Creative</a>
+                </li>
+            </ul>
+        </section>
+
+    </div>
+
+</footer>
+
+{{ theme:js src="vendor.js" cache_bust="true" tag="true" }}
+{{ theme:js cache_bust="true" tag="true" }}

@@ -1,0 +1,22 @@
+<div class="container">
+    <ul class="list-reset flex flex-wrap pt-4">
+        {{ collection:products limit="{limit}" }}
+            {{ if total_results > 0 }}
+                {{ if slug!=last_segment }}
+                <li class="w-full pb-4" itemscope itemtype="http://schema.org/Product">
+                    <a class="no-underline block bg-grey-300 shadow text-center" data-swup-link href="{{ url }}">
+                        {{ assets:banner }}
+                        <div>
+                            <img class="lazyload" data-src="{{ glide:id preset="medium" }}" alt="{{ alt }}" itemprop="description">
+                        </div>
+                        {{ /assets:banner }}
+                        <h3 itemprop="name">{{ title }}</h3>
+                    </a>
+                </li>
+                {{ /if }}
+            {{ else }}
+                <li>We haven’t posted any products yet.</li>
+            {{ /if }}
+        {{ /collection:products }}
+    </ul>
+</div>

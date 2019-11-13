@@ -1,0 +1,22 @@
+title: 'Entry: Employee'
+hide: true
+taxonomies: false
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        display: Name
+        type: text
+      position:
+        type: text
+        display: Position
+      headshot:
+        type: assets
+        display: Photo
+        container: main
+        folder: team
+        max_files: 1
+      bio:
+        type: textarea
+        display: Bio

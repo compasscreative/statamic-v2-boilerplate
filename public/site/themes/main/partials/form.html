@@ -1,0 +1,123 @@
+
+<section id="contact-form" class="section-pad">
+
+    <div class="container">
+
+        <header class="text-center mb-8">
+            <h2 class="text-4xl mx-auto max-w-xl mb-4 leading-tight">
+                {{ contact_form_heading or 'Send us a message' }}
+            </h2>
+            <div class="wysiwyg mx-auto max-w-2xl mb-12">
+                {{ contact_form_intro | markdown }}
+            </div>
+        </header>
+
+        {{ form:set is="{{ embed_form or 'contact' }}" attr="class:contact-form__form"}}
+
+        {{ if {form:errors} }}
+        <div class="border p-8">
+            <h2>We were unable to send your message!</h2>
+            <p>Both your name and a valid email address are required.</p>
+        </div>
+        <script>
+            document.querySelector('.contact-form__wrapper').scrollIntoView();
+        </script>
+        {{ /if }}
+
+        {{ form:create redirect="{{ embed_redirect or 'contact/thank-you' }}" files="true" attr="class:contact-form__form"}}
+
+        <ul class="max-w-xl mx-auto text-black">
+
+            {{ fields }}
+
+                <li class="mb-2 relative">
+
+                    {{ if type=="select" }}
+
+                    {{ partial:form_label embed_display="{{ display }}" embed_for="{{ field }}" }}
+                    <select class="p-4" name="{{ field }}" id="{{ field }}" value="{{ old }}" required>
+                        <option value="">Select One</option>
+                        {{ options }}
+                        <option value="{{ value }}">{{ value }}</option>
+                        {{ /options }}
+                    </select>
+
+                    {{ elseif type=="hidden" }}
+
+                    {{ partial:form_input
+                        embed_type="hidden"
+                        embed_name="{{ field }}"
+                        embed_id="{{ field }}"
+                    }}
+
+                    {{ elseif type=="asset" }}
+
+                    {{ partial:form_label embed_display="{{ display }}" embed_for="{{ field }}" }}
+                    {{ partial:form_input
+                        embed_type="file"
+                        embed_name="{{ field }}"
+                        embed_id="{{ field }}"
+                    }}
+
+                    {{ elseif type=="assets" }}
+
+                    {{ partial:form_label embed_display="{{ display }}" embed_for="{{ field }}" }}
+                    {{ partial:form_input
+                        embed_type="file"
+                        embed_name="{{ field }}"
+                        embed_id="{{ field }}"
+                        embed_multiple="true"
+                    }}
+
+                    {{ elseif type=="heading" }}
+
+                    <h3 id="{{ field }}">{{ display }}</h3>
+
+                    {{ elseif type=="textarea" }}
+
+                    {{ partial:form_label embed_display="{{ display }}" embed_for="{{ field }}" }}
+                    <textarea data-gramm_editor="false" class="js-form-input p-3 h-40 w-full placeholder-blue" name="{{ field }}" id="{{ field }}" placeholder="{{ display }}" data-placeholder="{{ display }}" >{{ old }}</textarea>
+
+                    {{ else }}
+
+                    {{ partial:form_label embed_display="{{ display }}" embed_for="{{ field }}" }}
+                    {{ partial:form_input
+                        embed_type="{{ format or 'text' }}"
+                        embed_name="{{ field }}"
+                        embed_id="{{ field }}"
+                        embed_placeholder="{{ display }}"
+                        embed_required="{{ required or 'false' }}"
+                        embed_readonly="{{ readonly or 'false' }}"
+                    }}
+
+                    {{ /if }}
+
+                    {{ if note }}
+                    <small>{{ note }}</small>
+                    {{ /if }}
+
+                </li>
+
+            {{ /fields }}
+
+            <li class="">
+                <label for="comment" tabindex="-1" class="absolute" style="left: -99999rem">Ignore this text box. It is used to detect spammers. If you enter anything into this text box, your message will not be sent.</label>
+                <input type="text" name="comment" tabindex="-1" class="absolute" style="left: -99999rem" />
+                {{ partial:button embed_swup_off="true" embed_text="Send" embed_tag="button" embed_styles="w-full" }}
+            </li>
+
+        </ul>
+
+        {{ if success }}
+        <div class="contact-form__success">
+            Form was submitted successfully.
+        </div>
+        {{ /if }}
+
+        {{ /form:create }}
+
+        {{ /form:set }}
+
+    </div>
+
+</section>

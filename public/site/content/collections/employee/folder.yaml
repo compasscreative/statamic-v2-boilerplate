@@ -1,0 +1,4 @@
+title: Employees
+order: number
+fieldset: entry_employee
+template: employee

@@ -1,0 +1,32 @@
+<header class="py-8 {{ bg_color or 'bg-grey-100' }} bg-cover bg-center lozad"
+    {{ assets:banner }}data-background-image="{{ glide:id preset="xl" }}"{{ /assets:banner }}
+    >
+
+    <div class="container">
+        {{ if pre_heading }}
+            {{ if pre_heading_link }}
+                <a class="no-underline hover:text-blue" href="{{ pre_heading_link }}">
+            {{ /if }}
+            <h1 class="text-base">{{ pre_heading }}</h1>
+            {{ if pre_heading_link }}
+                </a>
+            {{ /if }}
+            <h2 class="text-6xl">{{ heading or title }}</h2>
+        {{ else }}
+            <h1 class="text-6xl">{{ heading or title }}</h1>
+        {{ /if }}
+
+        {{ intro | markdown wrap:div.leadin }}
+
+        {{ if call_to_action }}
+            <div class="pt-8">
+                {{ partial:button
+                    embed_link="{{ if link }}{{ relate:link }}{{ url }}{{ /relate:link }}{{ elseif slug=="careers" }}#positions{{ else }}#contact-form{{ /if }}"
+                    embed_text="{{ call_to_action }}"
+                    embed_styles="smooth-scroll"
+                }}
+            </div>
+        {{ /if }}
+    </div>
+
+</header>

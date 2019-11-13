@@ -1,0 +1,19 @@
+routes:
+  # Dashboard
+  /:
+    uses: index
+    as: akismet
+
+  # Spam Queue
+  /queue:
+    uses: queue
+    as: queue
+
+  # get list of queued spam
+  get@spam: getSpam
+
+  # approve submission(s)
+  put@spam: approveHam
+
+  # discard submission(s) as spam
+  delete@spam: discardSpam

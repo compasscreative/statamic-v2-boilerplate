@@ -1,0 +1,48 @@
+d32e14fb-08c9-44c2-aaf8-21200852bafd:
+  title: Admin
+  slug: admin
+  permissions:
+    - super
+721bdd25-6734-4b65-962b-1b15cb58f8b1:
+  title: Editor
+  slug: editor
+  permissions:
+    - cp:access
+    - content:view_drafts_on_frontend
+    - resolve_duplicates
+    - pages:view
+    - pages:edit
+    - pages:create
+    - pages:delete
+    - pages:reorder
+    - collections:blog_post:view
+    - collections:blog_post:edit
+    - collections:blog_post:create
+    - collections:blog_post:delete
+    - collections:careers:view
+    - collections:careers:edit
+    - collections:careers:create
+    - collections:careers:delete
+    - collections:employee:view
+    - collections:employee:edit
+    - collections:employee:create
+    - collections:employee:delete
+    - collections:products:view
+    - collections:products:edit
+    - collections:products:create
+    - collections:products:delete
+    - collections:projects:view
+    - collections:projects:edit
+    - collections:projects:create
+    - collections:projects:delete
+    - globals:global:view
+    - globals:global:edit
+    - assets:main:view
+    - assets:main:edit
+    - assets:main:create
+    - assets:main:delete
+    - forms
+    - users:view
+    - users:edit
+    - users:create
+    - users:delete

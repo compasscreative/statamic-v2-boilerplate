@@ -1,0 +1,13 @@
+widgets:
+  -
+    type: form
+    form: contact
+    limit: 5
+    title: Recent Submissions
+    fields:
+      - name
+      - email
+    width: 33
+  -
+    type: CacheManager
+    width: 33

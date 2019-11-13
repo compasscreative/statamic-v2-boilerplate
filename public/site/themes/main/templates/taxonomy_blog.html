@@ -1,0 +1,18 @@
+{{ partial:blog-header }}
+
+<div class="container">
+
+    <div class="blog-post-list">
+        <article class="blog-post-list__article">
+            {{ collection:blog_post }}
+            <h2 class="blog-post-list__title">
+                <a class="blog-post-list__link" href="{{ url }}">
+                    {{ title }}
+                    <span class="blog-post-list__date">{{ date format="M j, Y" }}</span>
+                </a>
+            </h2>
+            {{ /collection:blog_post }}
+        </article>
+    </div>
+
+</div>

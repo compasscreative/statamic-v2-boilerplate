@@ -1,0 +1,21 @@
+title: 'Entry: Featured Project'
+create_title: Featured Project
+hide: true
+taxonomies: false
+fields:
+  page_hero:
+    type: partial
+    display: Banner
+    fieldset: partial_page_hero
+  content:
+    type: partial
+    display: Content
+    fieldset: partial_content_bard
+  gallery:
+    type: partial
+    display: Gallery
+    fieldset: partial_gallery
+  partial_search_and_social:
+    type: partial
+    display: 'Search & Social'
+    fieldset: partial_search_and_social

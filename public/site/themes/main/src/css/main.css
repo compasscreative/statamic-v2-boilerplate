@@ -1,0 +1,12 @@
+@import 'tailwindcss/base';
+@import './base/debug.css';
+@import './base/a.css';
+@import './base/lazysizes.css';
+@import './base/wysiwyg.css';
+
+@import 'tailwindcss/components';
+
+@import 'tailwindcss/utilities';
+@import './utilities/container.css';
+@import './utilities/section-pad.css';
+@import './utilities/sr.css';

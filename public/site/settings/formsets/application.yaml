@@ -1,0 +1,46 @@
+title: Application Form
+honeypot: comment
+fields:
+  name:
+    display: Name
+    validate: required|min:2
+    required: required
+    placeholder: Your name
+  email:
+    display: Email
+    validate: required|email
+    format: email
+    required: required
+    placeholder: you@email.com
+  phone:
+    display: Phone
+    format: tel
+    placeholder: (555) 555-5555
+  job:
+    display: Job
+    type: hidden
+    source: '{{ title }}'
+  resume:
+    display: 'Resumé'
+    type: asset
+    container: main
+    folder: form-submissions
+  message:
+    display: Message
+    type: textarea
+    align: right
+columns:
+  - name
+  - email
+  - job
+email:
+  -
+    to: '{{ env:NOTIFY_EMAIL default="hosting@compasscreative.ca" }}'
+    subject: 'Job Application from {{ name }}'
+    reply_to: '{{ email }}'
+    template: notify-admin-job-application
+  -
+    reply_to: '{{ env:NOTIFY_EMAIL default="hosting@compasscreative.ca" }}'
+    subject: 'Your application at {{ site_name }}'
+    to: '{{ email }}'
+    template: notify-applicant-job-application

@@ -1,0 +1,13 @@
+
+<div class="container lg:flex lg:flex-wrap lg:items-baseline">
+    <div class="relative z-10">
+        <a class="no-underline text-base block" data-swup-link data-swup-preload href="/">
+            <!-- <img class="mx-auto w-full mb-.5" itemprop="logo" src="{{ theme:img src="logo.svg" }}" alt="{{ site_name }}"> -->
+            {{ site_name }}
+        </a>
+        {{ if tagline }}
+        <span class="text-sm lg:text-base font-bold block w-full md:pl-1 md:-mt-.5 lg:pl-1.5 hidden md:block">{{ tagline }}</span>
+        {{ /if }}
+    </div>
+    {{ partial:main_nav }}
+</div>

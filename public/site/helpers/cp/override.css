@@ -1,0 +1,29 @@
+.outside {
+    background-color: #36414c;
+    background-image: none;
+    background-image: linear-gradient(hsla(0, 0%, 80%, 1), hsla(0, 0%, 50%, 1));
+}
+
+.outside .logo svg {
+    display: none;
+}
+
+.outside .logo  {
+    margin-bottom: 36px;
+    margin-top: 36px;
+    height: 54px;
+    background-image: url(/site/themes/main/img/logo.png);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.outside .btn-primary {
+    background-color: #de5a39;
+    border-bottom: 1px solid #b44428;
+}
+
+.outside .btn-primary:hover, .outside .btn-primary:focus, .outside .btn-primary:active {
+    background-color: #b44428;
+    border-bottom: 1px solid #b44428;
+}

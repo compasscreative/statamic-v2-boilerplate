@@ -1,0 +1,30 @@
+<div class="container">
+
+    {{ collection:blog scope="post" }}
+
+    <article class="section-pad-sm" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <h2 itemprop="headline">
+            <a href="{{ url }}">{{ title }}</a>
+        </h2>
+        <span  itemprop="dateCreated">{{ date format="M j, Y" }}</span>
+
+        {{ assets:blog_feature_image }}
+        <div>
+            <a href="{{ post:url }}">
+                <img  src="{{ glide:id preset="medium" }}" alt="{{ alt }}" itemprop="image">
+            </a>
+        </div>
+        {{ /assets:blog_feature_image }}
+
+        <div >
+            {{ blog_summary | markdown}}
+        </div>
+
+        <a data-swup-link href="{{ url }}">Read Post</a>
+
+    </article>
+
+    {{ /collection:blog }}
+
+</div>

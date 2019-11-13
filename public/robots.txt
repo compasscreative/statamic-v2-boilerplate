@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /contact/thank-you
+Disallow: /style-guide
+Disallow: /email-signature

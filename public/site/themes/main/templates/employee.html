@@ -1,0 +1,11 @@
+<div class="container">
+    {{ assets:employee_headshot }}
+    <img src="{{ glide:id preset="medium" }}" alt="{{ title }}">
+    {{ /assets:employee_headshot }}
+    <h1>{{ title }}</h1>
+    <p>{{ position }}</p>
+    <div>
+        {{ employee_bio | markdown }}
+    </div>
+    <a href="/about#team">View Team</a>
+</div>

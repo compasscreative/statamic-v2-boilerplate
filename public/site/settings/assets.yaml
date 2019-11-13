@@ -1,0 +1,28 @@
+image_manipulation_route: /img
+image_manipulation_secure: false
+auto_crop: true
+image_manipulation_driver: gd
+image_manipulation_cached: false
+image_manipulation_presets:
+  sm:
+    w: 400
+  md:
+    w: 800
+  lg:
+    w: 1600
+  xl:
+    w: 2400
+  sm_square:
+    h: 400
+    w: 400
+  md_square:
+    h: 800
+    w: 800
+  lg_square:
+    h: 1600
+    w: 1600
+  xl_square:
+    h: 2550
+    w: 2550
+thumbnail_max_width: 6000
+thumbnail_max_height: 6000

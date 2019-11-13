@@ -1,0 +1,17 @@
+sections:
+  main:
+    display: Main
+    fields:
+      accent_color:
+        width: 50
+        display: Accent Colour
+        type: select
+        options:
+          - blue-light
+          - green
+          - gold
+          - gray
+          - gray-200
+taxonomies: false
+hide: true
+title: 'Partial: Accent Color'

@@ -1,0 +1,94 @@
+{{ if environment == "staging" }}
+    <meta name="robots" content="noindex,nofollow">
+{{ /if }}
+
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>{{ seo_title or title or site_name }}{{ if seo_title=="" }} | {{ site_name }}{{ /if }}</title>
+<meta name="description" content="{{ seo_description or description or site_tagline | collapse_whitespace | safe_truncate:160:… }}" />
+<meta name="google-site-verification" content="{{ google_site_verification }}" />
+
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary{{ if seo_image }}_large_image{{ /if }}">
+{{ social_profiles }}
+{{ if social_profile_name ~ "(Twitter)" }}
+<meta name="twitter:site" content="{{ social_profile_link replace="https://twitter.com/|@" }}">
+<meta name="twitter:creator" content="{{ social_profile_link replace="https://twitter.com/|@"}}">
+{{ /if }}
+{{ /social_profiles }}
+<meta name="twitter:title" content="{{ seo_title or title }}">
+{{ if seo_description }}
+<meta name="twitter:text:description" content="{{ seo_description | collapse_whitespace | safe_truncate:160:... }}">
+{{ /if }}
+{{ if seo_image }}<meta name="twitter:image" content="{{ site_url | backspace:1 }}{{ glide src="{ seo_image }" width="1024" height="512" filename="twitter_card_image.jpg" }}">{{ /if }}
+
+<!-- Open Graph/Facebook data -->
+<meta property="og:title" content="{{ seo_title or title }}" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="{{ permalink }}" />
+{{ if seo_image }}
+<meta property="og:image" content="{{ site_url | backspace:1 }}{{ glide src="{ seo_image }" width="940" height="492" filename="open_graph_image.jpg"}}">
+<meta property="og:image:width" content="940" />
+<meta property="og:image:height" content="492" />
+{{ /if }}
+{{ if seo_description }}
+<meta property="og:description" content="{{ seo_description | collapse_whitespace | safe_truncate:160:... }}" />
+{{ /if }}
+<meta property="og:site_name" content="{{ site_name }}" />
+<meta property="fb:admins" content="170383939680448" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+<!-- Google Structured Data -->
+<script type="application/ld+json">
+// reference: https://developers.google.com/structured-data/
+{
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "url": "{{ site_url }}",
+    "logo": "{{ theme:img src="logo.png" }}",
+    "@context" : "http://schema.org",
+    "@type" : "Organization",
+    "url" : "{{ site_url }}",
+    "areaServed" : "CA",
+    "contactPoint" : [{
+        "@type" : "ContactPoint",
+        "telephone" : "+1-{{ primary_phone }}",
+        "contactType" : "customer service"
+    }],
+    "sameAs" : [
+    {{ social_profiles }}
+
+    "{{ social_profile_link }}"{{ if total_results!=index}},{{ /if }}
+
+    {{ /social_profiles }}
+    ]
+},
+{{ if office_latitude and office_longitude }}
+{
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": {{ office_latitude }},
+        "longitude": {{ office_longitude }}
+    }
+},
+{{ /if }}
+{
+    "openingHoursSpecification": [
+    {{ office_hours }}
+    {{ if closed!="True"}}
+    {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+        "{{ day }}"
+        ],
+        "opens": "{{ opens }}",
+        "closes": "{{ closes }}"
+    }
+    {{ if total_results!=index}},{{ /if }}
+    {{ /if }}
+    {{ /office_hours }}
+    ]
+}
+</script>

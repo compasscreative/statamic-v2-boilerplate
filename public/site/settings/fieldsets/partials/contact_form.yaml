@@ -1,0 +1,16 @@
+sections:
+  main:
+    display: Main
+    fields:
+      contact_form:
+        type: section
+        display: Contact Form
+      contact_form_heading:
+        type: text
+        display: Heading
+      contact_form_intro:
+        type: markdown
+        display: Intro
+taxonomies: false
+hide: true
+title: 'Partial: Contact Form'

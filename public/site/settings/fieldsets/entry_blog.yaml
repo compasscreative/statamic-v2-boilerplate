@@ -1,0 +1,43 @@
+title: 'Entry: Blog Post'
+create_title: Blog post
+hide: true
+taxonomies: false
+fields:
+  blog_post_feature_image:
+    type: assets
+    display: Feature Image
+    container: main
+    folder: blog
+    max_files: 1
+  blog_post_summary:
+    type: markdown
+    display: Summary
+    instructions: A short paragraph to show on the blog listing page
+    folder: blog
+
+  staff_author:
+    max_items: '1'
+    collection:
+      - team-member
+    mode: tags
+    type: collection
+    display: 'Staff Author'
+  guest_author_name:
+    type: text
+    width: 50
+    display: 'Guest Author Name'
+    instructions: 'Guest Author will not show if there is a Staff Author also assigned'
+  guest_author_url:
+    type: text
+    width: 50
+    display: 'Guest Author URL'
+    instructions: 'Link to website of guest author'
+
+  content:
+    type: partial
+    display: Content
+    fieldset: partial_content_bard
+  partial_search_and_social:
+    type: partial
+    display: 'Search & Social'
+    fieldset: partial_search_and_social

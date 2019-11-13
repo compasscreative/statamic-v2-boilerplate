@@ -1,0 +1,45 @@
+title: 'Page: Careers'
+create_title: Careers
+hide: true
+taxonomies: false
+sections:
+  main:
+    display: Main
+    fields:
+      page_hero:
+        type: partial
+        display: Banner
+        fieldset: partial_page_hero
+      content:
+        type: partial
+        display: Content
+        fieldset: partial_content_bard
+      section_benefits:
+        type: section
+        display: Benefits
+      benefits_heading:
+        type: text
+        display: Heading
+      benefits_list:
+        display: Items
+        type: list
+      gallery:
+        type: assets
+        container: main
+        folder: /gallery
+        max_files: 4
+
+  options:
+    display: Options
+    fields:
+      slug:
+        type: text
+        width: 33
+      search_and_social:
+        type: partial
+        display: 'Search & Social'
+        fieldset: partial_search_and_social
+      show_in_nav:
+        type: partial
+        display: Show in Nav
+        fieldset: partial_show_in_nav

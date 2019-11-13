@@ -1,0 +1,53 @@
+<div itemscope itemtype="http://schema.org/JobPosting">
+
+    <div class="text-center">
+        {{ partial:page_hero pre_heading="Careers" pre_heading_link="/careers" }}
+    </div>
+
+    <div class="container">
+        <div class="max-w-75 mx-auto">
+            {{ if job_location or estimated_salary or employment_type }}
+            <div class="py-1 px-2 my-3 border-b border-grey-200 text-center text-sm uppercase tracking-wide">
+                {{ /if }}
+                {{ if job_location }}
+                <span itemprop="jobLocation">
+                    {{ job_location }}{{ if estimated_salary or employment_type }},{{ /if }}
+                </span>
+                {{ /if }}
+                {{ if estimated_salary }}
+                <span itemprop="estimatedSalary">
+                    {{ estimated_salary }}{{ if employment_type }},{{ /if }}
+                </span>
+                {{ /if }}
+                {{ if employment_type }}
+                <span itemprop="employmentType">
+                    {{ employment_type }}
+                </span>
+                {{ /if }}
+                {{ if job_location or estimated_salary or employment_type }}
+            </div>
+            {{ /if }}
+
+            <div itemprop="description">
+                {{ partial:content_blocks embed_section_pad="section-pad-sm max-w-75 mx-auto" }}
+            </div>
+
+        </div>
+    </div>
+
+    <div class="bg-grey-200">
+        <div class="container text-sm text-center py-1">
+            Posted on <span itemprop="datePosted"></span>{{ date format="F j, Y" }}</span>
+            |
+            Hiring by <span itemprop="hiringOrganization"></span>{{ site_name }}</span>
+        </div>
+    </div>
+
+    {{ partial:form embed_form="application" embed_redirect="careers/thank-you" embed_heading="Apply for {{ title }}"
+    embed_sub_heading=" " }}
+
+    <div class="container text-center py-4">
+        <a href="/careers#positions" class="btn btn-lg">More positions</a>
+    </div>
+
+</div>

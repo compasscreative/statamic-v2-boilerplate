@@ -1,0 +1,14 @@
+theme: main
+default_layout: default
+default_page_template: default
+default_entry_template: default
+default_taxonomy_template: default
+error_template_folder: errors
+default_fieldset: default
+default_page_fieldset: default
+default_entry_fieldset: default
+default_term_fieldset: term
+default_asset_fieldset: asset
+smartypants: true
+allow_php: false
+markdown_hard_wrap: false
