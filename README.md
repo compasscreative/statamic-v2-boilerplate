@@ -27,11 +27,11 @@ If this is your first project with this boilerplate, a good workflow may be to [
 - Aibnb also has a great [JavaScript styleguide](https://github.com/airbnb/javascript).
 - PHP Standards are based on [PHP-FIG](https://www.php-fig.org/).
 
-## Front-end Frameworks Libraries
+## Front-end Libraries
 
 ### JavaScript
 - Compiling assets is done with Laravel Mix, the config file for this is `webpack.mix.js`
-- To date we’ve used jQuery for JavaScript, but are moving away from it towards vanilla JavaScript. This is optional at this point.
+- We use a vanilla approach to JS, bringing in a few libraries as needed and process custom code with Babel.
 - Lazy loading images is often done with the [Lazysizes library](https://github.com/aFarkas/lazysizes)
 - If you’d like to add more JavaScript libraries, you can import them using
 
