@@ -36,8 +36,8 @@ If this is your first project with this boilerplate, a good workflow may be to [
 - If you’d like to add more JavaScript libraries, you can import them using
 
 ### CSS
-- CSS is written in SASS (.scss files). We have historically used a [BEM Syntax](http://getbem.com/introduction/), but are moving to a [utility first approach](https://frontstuff.io/in-defense-of-utility-first-css)
-- The boilerplate is setup to use [Tailwindcss](https://tailwindcss.com/) for CSS. Bootstrap is fine to use as well.
+- CSS is written in plain CSS and processed with a couple PostCSS libraries. We use a [utility first approach](https://frontstuff.io/in-defense-of-utility-first-css)
+- The boilerplate is setup to use [Tailwindcss](https://tailwindcss.com/) for CSS.
 - [Photoswipe](https://photoswipe.com/documentation/getting-started.html) is used for image galleries.
 
 ## Deployments
