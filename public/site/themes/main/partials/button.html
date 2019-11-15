@@ -1,4 +1,4 @@
-<{{ embed_tag or 'a'}}
+<{{ p_tag or 'a'}}
 class="
 mx-auto
 py-3
@@ -10,10 +10,10 @@ cursor-point
 text-sm
 transition-all
 
-{{ if embed_hollow }}
+{{ if p_hollow }}
   border
-  border-{{ embed_hollow_color or 'green' }}
-  text-{{ embed_hollow_color or 'green' }}
+  border-{{ p_hollow_color or 'green' }}
+  text-{{ p_hollow_color or 'green' }}
   hover:border-white
   hover:text-white
 {{ else }}
@@ -23,10 +23,10 @@ transition-all
   focus:bg-green-active
 {{ /if }}
 
-{{ embed_styles }}
+{{ p_styles }}
 "
-href="{{ embed_link or "/" }}"
-{{ if embed_swup_off!="true"}}data-swup-link{{ /if }}
+href="{{ p_link or "/" }}"
+{{ if p_swup_off!="true"}}data-swup-link{{ /if }}
 >
-  {{ embed_text }}
-</{{ embed_tag or 'a'}}>
+  {{ p_text }}
+</{{ p_tag or 'a'}}>

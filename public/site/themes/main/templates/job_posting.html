@@ -1,7 +1,7 @@
 <div itemscope itemtype="http://schema.org/JobPosting">
 
     <div class="text-center">
-        {{ partial:page_hero pre_heading="Careers" pre_heading_link="/careers" }}
+        {{ partial:hero pre_heading="Careers" pre_heading_link="/careers" }}
     </div>
 
     <div class="container">
@@ -29,7 +29,7 @@
             {{ /if }}
 
             <div itemprop="description">
-                {{ partial:content_blocks embed_section_pad="section-pad-sm max-w-75 mx-auto" }}
+                {{ partial:content_blocks p_section_pad="section-pad-sm max-w-75 mx-auto" }}
             </div>
 
         </div>
@@ -43,8 +43,8 @@
         </div>
     </div>
 
-    {{ partial:form embed_form="application" embed_redirect="careers/thank-you" embed_heading="Apply for {{ title }}"
-    embed_sub_heading=" " }}
+    {{ partial:form p_form="application" p_redirect="careers/thank-you" p_heading="Apply for {{ title }}"
+    p_sub_heading=" " }}
 
     <div class="container text-center py-4">
         <a href="/careers#positions" class="btn btn-lg">More positions</a>

@@ -8,7 +8,7 @@ sections:
       page_hero:
         type: partial
         display: Banner
-        fieldset: partial_page_hero
+        fieldset: partial_hero
       content:
         type: partial
         display: Content

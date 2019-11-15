@@ -12,12 +12,12 @@ sections:
         type: bard
         display: 'Content Blocks'
         sets:
-          large_image:
-            display: 'Large Image'
+          image:
+            display: 'Image'
             fields:
-              large_image:
+              image:
                 type: assets
-                display: 'Large Image'
+                display: 'Image'
                 container: main
                 folder: general
                 max_files: 1
@@ -80,3 +80,19 @@ sections:
                     display: Title
                 type: grid
                 display: PDFs
+          shim:
+            display: Shim
+            type: select
+            fields:
+              bg_color:
+                type: partial
+                display: Color
+                fieldset: partial_bg_color
+              height:
+                type: select
+                display: Height
+                width: 33
+                options:
+                  section-pad-sm: Small
+                  section-pad: Medium
+                  section-pad-lg: Large

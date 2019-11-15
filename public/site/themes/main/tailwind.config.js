@@ -36,11 +36,7 @@ module.exports = {
         // transparent: 'rgba(0,0,0,0)'
       },
       fontSize: {
-        '3xs': '.5rem',
-        '2xs': '.7rem',
-        '6xl-flex': 'calc(2vw + 2rem)',
-        '5xl-flex': 'calc(2vw + 1.375rem)',
-        '4xl-flex': 'calc(1.5vw + 1.125rem)'
+        // '6xl': '4rem',
       },
       screens: {
         xxl: '1600px'

@@ -21,9 +21,9 @@
         {{ if call_to_action }}
             <div class="pt-8">
                 {{ partial:button
-                    embed_link="{{ if link }}{{ relate:link }}{{ url }}{{ /relate:link }}{{ elseif slug=="careers" }}#positions{{ else }}#contact-form{{ /if }}"
-                    embed_text="{{ call_to_action }}"
-                    embed_styles="smooth-scroll"
+                    p_link="{{ if link }}{{ relate:link }}{{ url }}{{ /relate:link }}{{ elseif slug=="careers" }}#positions{{ else }}#contact-form{{ /if }}"
+                    p_text="{{ call_to_action }}"
+                    p_styles="smooth-scroll"
                 }}
             </div>
         {{ /if }}
