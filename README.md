@@ -32,7 +32,7 @@ If this is your first project with this boilerplate, a good workflow may be to [
 ### JavaScript
 - Compiling assets is done with Laravel Mix, the config file for this is `webpack.mix.js`
 - To date we’ve used jQuery for JavaScript, but are moving away from it towards vanilla JavaScript. This is optional at this point.
-- Lazy loading images is often done with the [Lozad library](https://apoorv.pro/lozad.js/).
+- Lazy loading images is often done with the [Lazysizes library](https://github.com/aFarkas/lazysizes)
 - If you’d like to add more JavaScript libraries, you can import them using
 
 ### CSS
