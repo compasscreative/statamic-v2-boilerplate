@@ -11,10 +11,11 @@
             {{ if pre_heading_link }}
                 </a>
             {{ /if }}
-            <h2 class="text-6xl">{{ heading or title }}</h2>
-        {{ else }}
-            <h1 class="text-6xl">{{ heading or title }}</h1>
         {{ /if }}
+
+        <{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }} class="text-6xl leading-tight font-distressed">
+            {{ heading or title }}
+        </{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }}>
 
         {{ intro | markdown wrap:div.leadin }}
 
