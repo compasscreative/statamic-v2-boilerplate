@@ -12,10 +12,10 @@ sections:
         fieldset: partial_hero
       value_stack:
         type: partial
-        fieldset: partials/value_stack
+        fieldset: partial_value_stack
       plan:
         type: partial
-        fieldset: partials/plan
+        fieldset: partial_plan
   options:
     display: Options
     fields:

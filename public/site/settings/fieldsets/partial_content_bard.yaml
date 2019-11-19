@@ -87,7 +87,7 @@ sections:
               bg_color:
                 type: partial
                 display: Color
-                fieldset: partial_bg_color
+                fieldset: partial_accent_color
               height:
                 type: select
                 display: Height
