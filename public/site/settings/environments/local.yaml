@@ -9,7 +9,7 @@ settings:
       en:
         full: en_US
         name: English
-        url: http://local.statamic-boilerplate.com
+        url: http://statamic-boilerplate.test
   email:
     driver: smtp
     from_email: ce3521aca8-53214c@inbox.mailtrap.io
