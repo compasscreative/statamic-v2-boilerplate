@@ -208,14 +208,23 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
   }
 };
 
-function loadPhotoSwipe() {
+function loadPhotoSwipe(useEvent) {
+
   if (document.querySelector('.photoswipe-gallery')) {
-    // execute above function
-    document.addEventListener('DOMContentLoaded', function() {
-      initPhotoSwipeFromDOM('.photoswipe-gallery');
-    });
-    console.log('gallery plugin loaded');
+
+    if (useEvent == true) {
+      document.addEventListener("DOMContentLoaded", function() {
+        initPhotoSwipeFromDOM(".photoswipe-gallery");
+      });
+
+      return;
+    }
+
+    initPhotoSwipeFromDOM(".photoswipe-gallery");
+
+    return;
   }
+
 }
 
-loadPhotoSwipe();
+loadPhotoSwipe(true);
