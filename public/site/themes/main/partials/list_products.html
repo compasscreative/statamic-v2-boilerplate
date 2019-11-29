@@ -3,7 +3,7 @@
         {{ collection:products limit="{limit}" }}
             {{ if total_results > 0 }}
                 {{ if slug!=last_segment }}
-                <li class="w-full pb-4" itemscope itemtype="http://schema.org/Product">
+                <li class="w-full pb-4 animated opacity-25" itemscope itemtype="http://schema.org/Product">
                     <a class="no-underline block bg-grey-300 shadow text-center" data-swup-link href="{{ url }}">
                         {{ assets:banner }}
                         <div>
