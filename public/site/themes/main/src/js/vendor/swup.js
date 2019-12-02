@@ -3,6 +3,7 @@ let debugSwup = false;
 
 let swupPlugins = [new SwupFadeTheme(), new SwupScrollPlugin(), new SwupPreloadPlugin()];
 
+// don’t forget to set virtualPageView in GTM triggers
 if (enableGTM) swupPlugins.push(new SwupGtmPlugin());
 if (debugSwup) swupPlugins.push(new SwupDebugPlugin());
 

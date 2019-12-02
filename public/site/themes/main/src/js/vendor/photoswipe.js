@@ -208,23 +208,11 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
   }
 };
 
-function loadPhotoSwipe(useEvent) {
-
-  if (document.querySelector('.photoswipe-gallery')) {
-
-    if (useEvent == true) {
-      document.addEventListener("DOMContentLoaded", function() {
-        initPhotoSwipeFromDOM(".photoswipe-gallery");
-      });
-
-      return;
-    }
-
+function loadPhotoSwipe() {
+  if (document.querySelector(".photoswipe-gallery")) {
     initPhotoSwipeFromDOM(".photoswipe-gallery");
-
     return;
   }
-
 }
 
 loadPhotoSwipe(true);

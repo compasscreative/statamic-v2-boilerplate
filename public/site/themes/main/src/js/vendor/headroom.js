@@ -1,4 +1,4 @@
-const header = document.querySelector('.headroom');
+// const header = document.querySelector('.headroom');
 
-const headroom = new Headroom(header);
-headroom.init();
+// const headroom = new Headroom(header);
+// headroom.init();
