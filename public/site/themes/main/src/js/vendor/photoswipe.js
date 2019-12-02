@@ -215,4 +215,4 @@ function loadPhotoSwipe() {
   }
 }
 
-loadPhotoSwipe(true);
+loadPhotoSwipe();
