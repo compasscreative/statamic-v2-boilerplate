@@ -6,25 +6,25 @@ const tailwindcss = require('tailwindcss');
 require('laravel-mix-purgecss');
 
 mix
-  .postCss('./src/css/main.css', './css/', [
-    require('postcss-import'),
-    require('tailwindcss'),
-    require('postcss-nested'),
+  .postCss("./src/css/main.css", "./css/", [
+    require("postcss-import"),
+    require("tailwindcss"),
+    require("postcss-nested")
     //, require('autoprefixer')
   ])
-  .sass('./src/css/vendor/vendor.scss', './css/', {
+  .sass("./src/css/vendor/vendor.scss", "./css/", {
     sassOptions: {
-      outputStyle: 'nested',
-    },
+      outputStyle: "nested"
+    }
   })
   .options({ processCssUrls: false })
   .copy(
     [
-      './node_modules/photoswipe/dist/default-skin/default-skin.png',
-      './node_modules/photoswipe/dist/default-skin/default-skin.svg',
-      './node_modules/photoswipe/dist/default-skin/preloader.gif',
+      "./node_modules/photoswipe/dist/default-skin/default-skin.png",
+      "./node_modules/photoswipe/dist/default-skin/default-skin.svg",
+      "./node_modules/photoswipe/dist/default-skin/preloader.gif"
     ],
-    './img/photoswipe/'
+    "./img/photoswipe/"
   )
   // Use this if you want to import css files from node_modules
   // .combine([
@@ -35,31 +35,34 @@ mix
   // ], './vendor.css')
   .combine(
     [
-      './node_modules/photoswipe/dist/photoswipe.js',
-      './node_modules/photoswipe/dist/photoswipe-ui-default.min.js',
-      './node_modules/lazysizes/lazysizes.min.js',
-      './node_modules/headroom.js/dist/headroom.js',
-      './node_modules/swup/dist/swup.js',
-      './node_modules/@swup/fade-theme/dist/SwupFadeTheme.js',
-      './node_modules/@swup/debug-plugin/dist/SwupDebugPlugin.js',
-      './node_modules/@swup/scroll-plugin/dist/SwupScrollPlugin.js',
-      './node_modules/@swup/preload-plugin/dist/SwupPreloadPlugin.js',
-      './node_modules/@swup/gtm-plugin/dist/SwupGtmPlugin.js',
-      './src/js/vendor/*.js',
+      "./node_modules/photoswipe/dist/photoswipe.js",
+      "./node_modules/photoswipe/dist/photoswipe-ui-default.min.js",
+      "./node_modules/lazysizes/lazysizes.min.js",
+      // './node_modules/headroom.js/dist/headroom.js',
+      "./node_modules/swup/dist/swup.js",
+      "./node_modules/@swup/fade-theme/dist/SwupFadeTheme.js",
+      "./node_modules/@swup/debug-plugin/dist/SwupDebugPlugin.js",
+      "./node_modules/@swup/scroll-plugin/dist/SwupScrollPlugin.js",
+      "./node_modules/@swup/preload-plugin/dist/SwupPreloadPlugin.js",
+      "./node_modules/@swup/gtm-plugin/dist/SwupGtmPlugin.js",
+      "./src/js/vendor/*.js"
     ],
-    './js/vendor.js'
+    "./js/vendor.js"
   )
-  .babel(['./src/js/components/*.js', './src/js/init.js'], './js/main.js')
+  .babel(["./src/js/components/*.js", "./src/js/init.js"], "./js/main.js")
+  .options({presets: ["@babel/preset-env"]})
   .browserSync({
     proxy: localURL,
-    browser: 'firefox',
+    browser: "firefox",
     files: [
-      './tailwind.config.js',
-      './src/css/**/*.css',
-      './src/js/components/*.js',
-      './templates/*.html',
-      './partials/*.html',
-    ],
+      "./tailwind.config.js",
+      "./src/css/**/*.css",
+      "./src/js/components/*.js",
+      "./src/js/*.js",
+      "./src/js/vendor/*.js",
+      "./templates/*.html",
+      "./partials/*.html"
+    ]
   });
 
 // ==== purgeCSS
