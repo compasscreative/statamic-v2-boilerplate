@@ -50,7 +50,8 @@
     },
     "dependencies": {
         "laravel-mix-postcss-config": "^1.0.2",
-        "npm": "^6.9.0"
+        "npm": "^6.9.0",
+        "rellax": "^1.10.0"
     },
     "name": "compass-creative",
     "version": "1.0.0",
