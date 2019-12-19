@@ -9,9 +9,9 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
-    "devDependencies": {
-        "@babel/core": "^7.6.4",
-        "@babel/preset-env": "^7.6.3",
+    "dependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.6",
         "@swup/debug-plugin": "^1.0.3",
         "@swup/fade-theme": "^1.0.5",
         "@swup/ga-plugin": "^1.0.1",
@@ -46,11 +46,7 @@
         "tailwindcss-grid": "^1.2.1",
         "tailwindcss-transitions": "^2.1.0",
         "vue-template-compiler": "^2.6.10",
-        "webpack": "^4.41.2"
-    },
-    "dependencies": {
-        "laravel-mix-postcss-config": "^1.0.2",
-        "npm": "^6.9.0",
+        "webpack": "^4.41.2",
         "rellax": "^1.10.0"
     },
     "name": "compass-creative",

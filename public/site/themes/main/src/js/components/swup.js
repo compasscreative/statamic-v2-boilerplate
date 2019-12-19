@@ -31,7 +31,10 @@ swup.on('animationInStart', () => {
     return;
   }
 
-  swup.scrollTo(document.body, 0);
+  if (!window.location.hash) {
+    swup.scrollTo(document.body, 0);
+  }
+
   hamburger.doToggle(true);
   init();
 });
