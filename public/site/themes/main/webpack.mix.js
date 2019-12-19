@@ -38,7 +38,6 @@ mix
       "./node_modules/photoswipe/dist/photoswipe.js",
       "./node_modules/photoswipe/dist/photoswipe-ui-default.min.js",
       "./node_modules/lazysizes/lazysizes.min.js",
-      // './node_modules/headroom.js/dist/headroom.js',
       "./node_modules/rellax/rellax.js",
       "./node_modules/swup/dist/swup.js",
       "./node_modules/@swup/fade-theme/dist/SwupFadeTheme.js",
