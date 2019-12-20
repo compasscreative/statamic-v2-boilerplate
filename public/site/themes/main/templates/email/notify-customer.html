@@ -2,7 +2,7 @@ Service: {{ select_service }}
 Name: {{ name }}
 Email: {{ email }}
 Phone: {{ phone }}
-City: {{ city }}
+Location: {{ location }}
 Date: {{ date }}
 
 Message:
@@ -21,6 +21,12 @@ Message:
         <div style="padding: 12px 12px 12px 40px; background: #eeeeee; font-size: 12px; text-transform: uppercase; margin-bottom: 24px; letter-spacing: 1px;"><small>Submitted information</small></div>
         <div style="padding: 20px 40px 60px;">
             {{ partial:form_notification_fields }}
+            <div style="padding: 20px 40px 60px;">
+                <a href="https://wholesale.hortico.com">
+                    <img src="{{ site_url }}site/themes/main/img/logo.svg" height="46" width="204"
+                        alt="{{ site_name }}">
+                </a>
+            </div>
         </div>
     </div>
 
