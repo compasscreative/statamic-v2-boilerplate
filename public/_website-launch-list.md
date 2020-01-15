@@ -107,8 +107,6 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 - N - Run [Mobility Test](https://www.google.ca/webmasters/tools/mobile-friendly/)
 - N - Check for Broken Links [Link Checker](http://validator.w3.org/checklink)
 - N - Run Site grade using [pingdom](http://tools.pingdom.com)
-- N - Run [SEO redirect test](http://www.ragepank.com/redirect-check/)
-- N - Run [DNS check](http://intodns.com)
 - N - Run [accessibility check](http://achecker.ca/checker/index.php)
 - N - Run [duplicate copy check](http://www.copyscape.com)
 
