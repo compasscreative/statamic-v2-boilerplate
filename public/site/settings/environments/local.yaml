@@ -10,12 +10,12 @@ settings:
         full: en_US
         name: English
         url: http://statamic-boilerplate.test
-  email:
-    driver: smtp
-    from_email: ce3521aca8-53214c@inbox.mailtrap.io
-    from_name: Mail Trap
-    host: smtp.mailtrap.io
-    port: '2525'
-    encryption: tls
-    username: 1328c5409d8b09
-    password: 73140a0994750a
+  # email:
+  #   driver: smtp
+  #   from_email: ce3521aca8-53214c@inbox.mailtrap.io
+  #   from_name: Mail Trap
+  #   host: smtp.mailtrap.io
+  #   port: '2525'
+  #   encryption: tls
+  #   username: 1328c5409d8b09
+  #   password: 73140a0994750a

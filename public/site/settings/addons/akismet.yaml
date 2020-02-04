@@ -1,10 +1,10 @@
 akismet_key:
 roles:
   - d32e14fb-08c9-44c2-aaf8-21200852bafd
-forms:
-  -
-    form_and_fields:
-      form: contact
-      author_field: name
-      email_field: email
-      content_field: message
+# forms:
+#   -
+#     form_and_fields:
+#       form: contact
+#       author_field: name
+#       email_field: email
+#       content_field: message

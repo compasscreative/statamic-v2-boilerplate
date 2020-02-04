@@ -10,9 +10,9 @@ Message:
 
 ---
 
-<div style="padding: 40px; line-height: 1.5; font-family: sans-serif; background-color: #eee; color: #222244">
+<div style="padding: 40px; line-height: 1.5; font-family: sans-serif; background-color: #f4f4f4; color: #2c2c2c">
 
-    <div style="color: #fff; margin-bottom: 40px">
+    <div style="margin-bottom: 40px">
         <h3 style="font-size: 20px">{{ name }},</h3>
         <p>Thank you for contacting <a style="color: #fff" href="{{ site_url }}">{{ site_name }}</a>. This email confirms your form submission, a member from our team will be in contact with you shortly.</p>
     </div>
@@ -22,7 +22,7 @@ Message:
         <div style="padding: 20px 40px 60px;">
             {{ partial:form_notification_fields }}
             <div style="padding: 20px 40px 60px;">
-                <a href="https://wholesale.hortico.com">
+                <a href="{{ site_url }}">
                     <img src="{{ site_url }}site/themes/main/img/logo.svg" height="46" width="204"
                         alt="{{ site_name }}">
                 </a>

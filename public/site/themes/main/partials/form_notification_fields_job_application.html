@@ -1,6 +1,6 @@
-<p><strong style="display: block; font-size: 10px; color: #777; text-transform: uppercase">Position</strong> {{ job }}</p>
+<p><strong style="display: block; font-size: 10px; color: #777; text-transform: uppercase">Position</strong> {{ job or 'General Application' }}</p>
 <p><strong style="display: block; font-size: 10px; color: #777; text-transform: uppercase">Name</strong> {{ name }}</p>
 <p><strong style="display: block; font-size: 10px; color: #777; text-transform: uppercase">Email</strong> {{ email }}</p>
 <p><strong style="display: block; font-size: 10px; color: #777; text-transform: uppercase">Phone</strong> {{ phone }}</p>
-<p><strong style="display: block; font-size: 10px; color: #777; text-transform: uppercase">Resumé</strong> <a href="{{ site_url}}form-submissions/{{ resume }}">{{ site_url}}resumes/{{ resume }}</a></p>
+<p><strong style="display: block; font-size: 10px; color: #777; text-transform: uppercase">Resumé</strong> <a href="{{ site_url}}{{ resume }}">{{ site_url}}{{ resume }}</a></p>
 <p style="margin-bottom: 32px"><strong style="display: block; font-size: 10px; color: #777; text-transform: uppercase">Message</strong> {{ message | nl2br }}</p>
