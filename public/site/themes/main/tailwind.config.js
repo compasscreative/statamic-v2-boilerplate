@@ -68,6 +68,7 @@ module.exports = {
       },
       fontSize: {
         // '6xl': '4rem',
+        "2xs": ".625rem"
       },
       screens: {
         xxl: "1600px"

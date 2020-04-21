@@ -1,8 +1,8 @@
 const loadFormLabels = () => {
   if (document.querySelector(".js-form-label")) {
     const formInputs = document.querySelectorAll(".js-form-input");
-    const activeClasses = ["opacity-100", "text-xs", "text-hortico-gray"];
-    const disabledClasses = ["opacity-0", "text-2xs", "text-hortico-gray"];
+    const activeClasses = ["opacity-100", "text-2xs"];
+    const disabledClasses = ["opacity-0", "text-xs"];
 
     for (var i = 0; i < formInputs.length; i++) {
       const label = document.querySelector(`label[for="${formInputs[i].id}"]`);
