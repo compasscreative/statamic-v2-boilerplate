@@ -15,10 +15,10 @@ d32e14fb-08c9-44c2-aaf8-21200852bafd:
     - pages:create
     - pages:delete
     - pages:reorder
-    - collections:blog_post:view
-    - collections:blog_post:edit
-    - collections:blog_post:create
-    - collections:blog_post:delete
+    - collections:blog:view
+    - collections:blog:edit
+    - collections:blog:create
+    - collections:blog:delete
     - collections:careers:view
     - collections:careers:edit
     - collections:careers:create
@@ -46,3 +46,5 @@ d32e14fb-08c9-44c2-aaf8-21200852bafd:
     - users:edit
     - users:create
     - users:delete
+    - users:edit-passwords
+    - users:edit-roles

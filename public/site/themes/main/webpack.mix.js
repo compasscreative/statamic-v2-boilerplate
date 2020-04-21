@@ -1,9 +1,10 @@
-const localURL = 'http://vandenberg-landscapes.test'; // *** change this to your local url ***
+const localURL = "http://statamic-boilerplate.test"; // *** change this to your local url ***
+const devBrowser = "Firefox Developer Edition";
 
-const mix = require('laravel-mix');
-const tailwindcss = require('tailwindcss');
+const mix = require("laravel-mix");
+const tailwindcss = require("tailwindcss");
 
-require('laravel-mix-purgecss');
+require("laravel-mix-purgecss");
 
 mix
   .postCss("./src/css/main.css", "./css/", [
@@ -53,7 +54,7 @@ mix
   .options({ presets: ["@babel/preset-env"] })
   .browserSync({
     proxy: localURL,
-    browser: process.env.DEV_BROWSER,
+    browser: devBrowser,
     files: [
       "./tailwind.config.js",
       "./src/css/**/*.css",
@@ -70,15 +71,15 @@ if (mix.inProduction()) {
   mix.purgeCss({
     enabled: true,
     globs: [
-      path.join(__dirname, 'layouts/*.html'),
-      path.join(__dirname, 'templates/*.html'),
-      path.join(__dirname, 'templates/**/*.html'),
-      path.join(__dirname, 'partials/*.html'),
-      path.join(__dirname, 'partials/**/*.html'),
-      path.join(__dirname, 'js/**.js'),
-      path.join(__dirname, 'img/**.svg'),
+      path.join(__dirname, "layouts/*.html"),
+      path.join(__dirname, "templates/*.html"),
+      path.join(__dirname, "templates/**/*.html"),
+      path.join(__dirname, "partials/*.html"),
+      path.join(__dirname, "partials/**/*.html"),
+      path.join(__dirname, "js/**.js"),
+      path.join(__dirname, "img/**.svg")
     ],
-    extensions: ['html', 'js', 'php', 'svg'],
-    whitelistPatterns: [/$lg-/],
+    extensions: ["html", "js", "php", "svg"],
+    whitelistPatterns: [/$lg-/]
   });
 }

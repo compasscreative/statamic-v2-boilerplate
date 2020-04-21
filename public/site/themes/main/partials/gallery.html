@@ -1,0 +1,25 @@
+<section class="section-pad">
+    {{ if gallery_heading }}<h2 class="text-3xl mb-4 max-w-xl mx-auto">{{ gallery_heading }}</h2>{{ /if }}
+    {{ if gallery_subheading }}<div class="text-lg max-w-xl mx-auto mb-4">{{ gallery_subheading | markdown }}</div>{{ /if }}
+    <ul id="gallery-{{ index }}"  class="photoswipe-gallery grid grid-cols-2 gap-1 lg:grid-cols-3 xl:grid-cols-4 container" itemscope itemtype="http://schema.org/ImageGallery">
+        {{ assets:gallery_images }}
+            <li class="aspect-ratio-square relative overflow-hidden bg-gray-400 {{ if index=="1" or  index=="8" or index=="11" or index=="18" }}{{ if index!==total_results}}row-span-2 col-span-2{{ /if }}{{ /if }}">
+                <figure class="absolute pin" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                    <a itemprop="contentUrl"
+                        {{ glide:generate src="{id}" preset="xl" }}
+                        href="{{ url }}"
+                        data-size="{{ width }}x{{ height }}"
+                        {{ /glide:generate }}
+                        title="{{ alt or filename }}"
+                        data="no-swup"
+                        >
+                        <picture>
+                            <source data-srcset="{{ glide:id preset="sm_square" }} 400w, {{ glide:id preset="md_square" }} 800w" data-sizes="auto">
+                            <img class="lazyload" data-src="{{ glide:id preset="sm_square" }}" alt="{{ alt or filename}}" itemprop="thumbnail" >
+                        </picture>
+                    </a>
+                </figure>
+            </li>
+        {{ /assets:gallery_images }}
+    </ul>
+</section>

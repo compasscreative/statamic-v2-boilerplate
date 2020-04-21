@@ -6,23 +6,30 @@ image_manipulation_cached: false
 image_manipulation_presets:
   sm:
     w: 400
+    fm: webp
   md:
     w: 800
+    fm: webp
   lg:
     w: 1600
+    fm: webp
   xl:
     w: 2400
   sm_square:
     h: 400
     w: 400
+    fm: webp
   md_square:
     h: 800
     w: 800
+    fm: webp
   lg_square:
     h: 1600
     w: 1600
+    fm: webp
   xl_square:
     h: 2550
     w: 2550
+    fm: webp
 thumbnail_max_width: 6000
 thumbnail_max_height: 6000

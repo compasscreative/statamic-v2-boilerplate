@@ -7,7 +7,10 @@
                     <a class="no-underline block bg-grey-300 shadow text-center" data-swup-link href="{{ url }}">
                         {{ assets:banner }}
                         <div>
-                            <img class="lazyload" data-src="{{ glide:id preset="medium" }}" alt="{{ alt }}" itemprop="description">
+                            <picture>
+                                <source srcset="{{ glide:id preset="md" }} 800w, {{ glide:id preset="lg" }} 1600w, {{ glide:id preset="xl" }} 2400w">
+                                <img class="lazyload" data-src="{{ glide:id preset="medium" }}" alt="{{ alt }}" itemprop="description">
+                            </picture>
                         </div>
                         {{ /assets:banner }}
                         <h3 itemprop="name">{{ title }}</h3>

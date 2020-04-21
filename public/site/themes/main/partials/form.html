@@ -24,6 +24,12 @@
         </script>
         {{ /if }}
 
+        {{ if success }}
+        <div class="border p-8">
+            Form was submitted successfully.
+        </div>
+        {{ /if }}
+
         {{ form:create redirect="{{ p_redirect or 'contact/thank-you' }}" files="true" attr="class:contact-form__form"}}
 
         <ul class="max-w-xl mx-auto text-black">
@@ -107,12 +113,6 @@
             </li>
 
         </ul>
-
-        {{ if success }}
-        <div class="contact-form__success">
-            Form was submitted successfully.
-        </div>
-        {{ /if }}
 
         {{ /form:create }}
 

@@ -1,5 +1,5 @@
 <header class="py-8 {{ bg_color or 'bg-grey-100' }} bg-cover bg-center lazyload"
-    {{ assets:banner }}data-background-image="{{ glide:id preset="xl" }}"{{ /assets:banner }}
+    {{ assets:banner }}data-bg="{{ glide:id preset="xl" }}"{{ /assets:banner }}
     >
 
     <div class="container">
@@ -13,7 +13,7 @@
             {{ /if }}
         {{ /if }}
 
-        <{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }} class="text-6xl leading-tight font-distressed">
+        <{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }} class="text-6xl leading-tight font-distressed" itemprop="title">
             {{ heading or title }}
         </{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }}>
 

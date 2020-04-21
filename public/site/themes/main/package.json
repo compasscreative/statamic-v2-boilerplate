@@ -25,8 +25,6 @@
         "browser-sync-webpack-plugin": "*",
         "cross-env": "^6.0.3",
         "css-loader": "^2.1.1",
-        "headroom.js": "^0.10.3",
-        "jquery": "^3.4.1",
         "laravel-mix": "^4.1.4",
         "laravel-mix-purgecss": "^4.2.0",
         "lazysizes": "^5.1.2",
@@ -37,15 +35,9 @@
         "postcss-import": "^12.0.1",
         "postcss-nesting": "^7.0.1",
         "resolve-url-loader": "^3.1.0",
-        "sass": "^1.23.0",
-        "sass-loader": "^7.3.1",
         "swup": "^2.0.7",
-        "tailwindcss": "^1.1.2",
+        "tailwindcss": "*",
         "tailwindcss-aspect-ratio": "^2.0.0",
-        "tailwindcss-gradients": "^2.3.1",
-        "tailwindcss-grid": "^1.2.1",
-        "tailwindcss-transitions": "^2.1.0",
-        "vue-template-compiler": "^2.6.10",
         "webpack": "^4.41.2",
         "rellax": "^1.10.0"
     },
@@ -68,5 +60,6 @@
     "bugs": {
         "url": "https://github.com/compasscreative/compass-creative/issues"
     },
-    "homepage": "https://github.com/compasscreative/compass-creative#readme"
+    "homepage": "https://github.com/compasscreative/compass-creative#readme",
+    "devDependencies": {}
 }
