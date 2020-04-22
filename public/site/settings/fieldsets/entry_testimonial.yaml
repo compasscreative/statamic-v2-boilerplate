@@ -1,0 +1,29 @@
+sections:
+  main:
+    display: Main
+    fields:
+      title:
+        type: text
+        display: Client Name
+        localizable: true
+      quote:
+        type: textarea
+        display: Quote
+      related_project:
+        type: collection
+        display: Project
+        max_items: "1"
+        collection:
+          - projects
+        mode: tags
+      image:
+        type: assets
+        display: Image
+        container: projects
+        folder: /
+        restrict: false
+        max_files: 1
+        mode: list
+taxonomies: false
+hide: true
+title: 'Entry: Testimonial'
