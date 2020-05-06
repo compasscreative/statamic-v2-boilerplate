@@ -17,25 +17,35 @@ body.development:after {
   opacity: 0.5;
   text-align: center;
 
-  content: 'xs';
+  content: "xs";
+}
 
-  @screen sm {
-    content: 'sm';
+@screen sm {
+  body.development:after {
+    content: "sm";
   }
+}
 
-  @screen md {
-    content: 'md';
+@screen md {
+  body.development:after {
+    content: "md";
   }
+}
 
-  @screen lg {
-    content: 'lg';
+@screen lg {
+  body.development:after {
+    content: "lg";
   }
+}
 
-  @screen xl {
-    content: 'xl';
+@screen xl {
+  body.development:after {
+    content: "xl";
   }
+}
 
-  /* @screen xxl {
-    content: 'xxl';
-  } */
+@screen xxl {
+  body.development:after {
+    content: "xxl";
+  }
 }

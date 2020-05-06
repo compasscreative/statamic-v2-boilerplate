@@ -8,6 +8,3 @@ widgets:
       - name
       - email
     width: 33
-  -
-    type: CacheManager
-    width: 33

@@ -18,7 +18,7 @@ let defaultConfig = require("tailwindcss/defaultConfig");
 module.exports = {
   theme: {
     container: {
-      center: true
+      center: true,
     },
     fontFamily: {
       sans: [
@@ -33,7 +33,7 @@ module.exports = {
         "Fira Sans",
         "Droid Sans",
         "Helvetica Neue",
-        "sans-serif"
+        "sans-serif",
       ],
       serif: [
         "Constantia",
@@ -45,7 +45,7 @@ module.exports = {
         "Bitstream Vera Serif",
         "Liberation Serif",
         "Georgia",
-        "serif"
+        "serif",
       ],
       mono: [
         "Menlo",
@@ -53,14 +53,14 @@ module.exports = {
         "Consolas",
         "Liberation Mono",
         "Courier New",
-        "monospace"
-      ]
+        "monospace",
+      ],
     },
     aspectRatio: {
       square: [1, 1],
       "16/9": [16, 9],
       "4/3": [4, 3],
-      "21/9": [21, 9]
+      "21/9": [21, 9],
     },
     extend: {
       colors: {
@@ -68,24 +68,24 @@ module.exports = {
       },
       fontSize: {
         // '6xl': '4rem',
-        "2xs": ".625rem"
+        "2xs": ".625rem",
       },
       screens: {
-        xxl: "1600px"
+        content: "1600px",
       },
       spacing: {
         "2px": "2px",
-        "3px": "3px"
+        "3px": "3px",
       },
       maxWidth: {
-        content: "1400px"
-      }
-    }
+        content: "1400px",
+      },
+    },
   },
   plugins: [require("tailwindcss-aspect-ratio")()],
   variants: {
     aspectRatio: ["responsive"],
     transitionDelay: ["responsive"],
-    willChange: ["responsive"]
-  }
+    willChange: ["responsive"],
+  },
 };

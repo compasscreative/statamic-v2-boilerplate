@@ -1,0 +1,16 @@
+routes:
+  /:
+    as: addons.cache_tidy
+    uses: index
+  cache:
+    as: addons.clear_cache
+    uses: cache
+  glide:
+    as: addons.clear_glide
+    uses: glide
+  stache:
+    as: addons.clear_stache
+    uses: stache
+  static:
+    as: addons.clear_static
+    uses: staticCache

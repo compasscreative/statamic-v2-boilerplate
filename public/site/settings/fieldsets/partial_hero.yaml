@@ -22,16 +22,13 @@ fields:
   intro:
     type: textarea
     display: Intro
-  call_to_action:
+  call_to_action_text:
     type: text
     display: Call to Action
     instructions: Optional
     width: 50
-  link:
-    type: pages
-    display: Call to Action Link
-    instructions: Leave blank to link to form at bottom of page
-    depth: "1"
-    max_items: 1
-    mode: tags
+  call_to_action_url:
+    type: text
+    display: Call to Action
+    instructions: Optional
     width: 50
