@@ -1,0 +1,9 @@
+.first-p-large p:first-of-type {
+  @apply text-xl font-hairline mb-5;
+}
+
+@screen xl {
+  .first-p-large p:first-of-type {
+    @apply text-2xl;
+  }
+}
