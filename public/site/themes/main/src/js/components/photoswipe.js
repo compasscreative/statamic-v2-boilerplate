@@ -1,7 +1,9 @@
-var initPhotoSwipeFromDOM = function(gallerySelector) {
+var initPhotoSwipeFromDOM = function (gallerySelector) {
+  const burgerMenu = document.querySelector(".js-burger-trigger");
+
   // parse slide data (url, title, size ...) from DOM elements
   // (children of gallerySelector)
-  var parseThumbnailElements = function(el) {
+  var parseThumbnailElements = function (el) {
     var thumbElements = el.childNodes,
       numNodes = thumbElements.length,
       items = [],
@@ -26,7 +28,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
       item = {
         src: linkEl.getAttribute("href"),
         w: parseInt(size[0], 10),
-        h: parseInt(size[1], 10)
+        h: parseInt(size[1], 10),
       };
 
       if (figureEl.children.length > 1) {
@@ -51,15 +53,22 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     return el && (fn(el) ? el : closest(el.parentNode, fn));
   };
 
+  const hideBurgerMenu = function () {
+    console.log("hidding menu");
+    burgerMenu.classList.add("hidden");
+  };
+
   // triggers when user clicks on thumbnail
-  var onThumbnailsClick = function(e) {
+  var onThumbnailsClick = function (e) {
     e = e || window.event;
     e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+
+    hideBurgerMenu();
 
     var eTarget = e.target || e.srcElement;
 
     // find root element of slide
-    var clickedListItem = closest(eTarget, function(el) {
+    var clickedListItem = closest(eTarget, function (el) {
       return el.tagName && el.tagName.toUpperCase() === "FIGURE";
     });
 
@@ -95,7 +104,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
   };
 
   // parse picture index and gallery index from URL (#&pid=1&gid=2)
-  var photoswipeParseHash = function() {
+  var photoswipeParseHash = function () {
     var hash = window.location.hash.substring(1),
       params = {};
 
@@ -122,7 +131,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     return params;
   };
 
-  var openPhotoSwipe = function(
+  var openPhotoSwipe = function (
     index,
     galleryElement,
     disableAnimation,
@@ -141,20 +150,20 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
       galleryUID: galleryElement.getAttribute("data-pswp-uid"),
 
       showHideOpacity: true,
-      bgOpacity: 0.85,
+      bgOpacity: 0.5,
       history: false,
       // modal: false,
       shareButtons: [
         {
           id: "facebook",
           label: "Share on Facebook",
-          url: "https://www.facebook.com/sharer/sharer.php?u={{url}}"
+          url: "https://www.facebook.com/sharer/sharer.php?u={{url}}",
         },
         {
           id: "twitter",
           label: "Tweet",
-          url: "https://twitter.com/intent/tweet?text={{text}}&url={{url}}"
-        }
+          url: "https://twitter.com/intent/tweet?text={{text}}&url={{url}}",
+        },
         // { id: 'pinterest', label: 'Pin it', url: 'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}' }
       ],
       counterEl: false,
@@ -162,7 +171,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
       hideAnimationDuration: 0,
       showAnimationDuration: 0,
 
-      getThumbBoundsFn: function(index) {
+      getThumbBoundsFn: function (index) {
         // See Options -> getThumbBoundsFn section of documentation for more info
         var thumbnail = items[index].el.getElementsByTagName("img")[0], // find thumbnail
           pageYScroll =
@@ -170,7 +179,7 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
           rect = thumbnail.getBoundingClientRect();
 
         return { x: rect.left, y: rect.top + pageYScroll, w: rect.width };
-      }
+      },
     };
 
     // PhotoSwipe opened from URL
@@ -204,6 +213,11 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
     // Pass data to PhotoSwipe and initialize it
     gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
     gallery.init();
+
+    gallery.listen("close", function () {
+      console.log("showing menu");
+      burgerMenu.classList.remove("hidden");
+    });
   };
 
   // loop through all gallery elements and bind events
@@ -225,6 +239,5 @@ var initPhotoSwipeFromDOM = function(gallerySelector) {
 function loadPhotoSwipe() {
   if (document.querySelector(".photoswipe-gallery")) {
     initPhotoSwipeFromDOM(".photoswipe-gallery");
-    return;
   }
 }
