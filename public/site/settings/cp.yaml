@@ -8,3 +8,7 @@ widgets:
       - name
       - email
     width: 33
+#  -
+#    type: VideoDemo
+#    videofile: '/site/themes/main/video/statamic-demo.mp4'
+#    width: full
