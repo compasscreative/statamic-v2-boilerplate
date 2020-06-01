@@ -1,8 +1,8 @@
 driver: smtp
-from_email: info@oceanviewlandscape.com
+from_email: info@email.com
 from_name: Compass Creative
 host: smtp.postmarkapp.com
 port: "587"
 encryption: tls
-username: 441c32f1-4b1f-4937-aeb6-5e85eaa5ac7e
-password: 441c32f1-4b1f-4937-aeb6-5e85eaa5ac7e
+username:
+password:
