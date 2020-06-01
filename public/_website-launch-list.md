@@ -2,15 +2,17 @@
 
 Please review the below upon launch of any website. Change the - N - to - N - once completed.
 
-- N - Review Domain Name
-- N - Save all content on production back to repo
+- Y - Review Domain Name
+- Y - Save all content on production back to repo
+- N - Add account to [Compass Hosting & Domains spreadsheet](https://docs.google.com/spreadsheets/d/12b5GqLTY786mWfziAG9kO49Oouafix3dRkh2LHzxxEU/edit#gid=1679013529)
 
 ## Accounts
 
-- N - Setup Mail delivery account (usually Postmark)
+- Y - Setup Mail delivery account (usually Postmark)
 - N - Setup Google Search Console
 - N - Submit [sitemap](https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190) to webmaster tools
 - N - Setup Google Tag Manger
+- N - Sentry for JavaScript bug tracking
 - N - Setup Hotjar
 - N - Setup Hotjar Funnels, Forms and Heatmaps
 - N - Add domain to uptimerobot.com
@@ -20,7 +22,7 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 - N - Add CRM domain to Google Analytics (referral exclusion list)[https://gaconnector.com/blog/eliminate-webto-salesforce-com-referral-google-analytics/]
 - N - Setup appropriate Google Analytics Events
 - N - Relevant IP addresses have been excluded from analytics tracking. Compass office is 72.38.112.218
-- N - Enable Virtual PageView tracking in GTM / Analytics
+- N - Enable PageView tracking in GTM / Analytics
 
 ## Control panel
 - N - Customize control panel login page
@@ -45,8 +47,7 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 - N - Make sure all assets are compressed an minified
 - N - Optimize images, transparent pngs can be reduced with ImageAlpha.app
 - N - CMS contains helpful instructions
-- N - CMS contains size instructions for images
-- N - Form error messages are functioning properly (often rely on require for browser, non-js method)
+- N - Form error messages are functioning properly (often rely on require for browser, non-js method)ain.
 
 ## Programming
 

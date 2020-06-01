@@ -9,7 +9,7 @@ function loadScrollObserver() {
         });
       },
       {
-        rootMargin: "-100vh 0px -100vh 0px",
+        rootMargin: "-100px 0px -100px 0px",
       }
     );
     document.querySelectorAll(".scroll-animate").forEach(function (element) {

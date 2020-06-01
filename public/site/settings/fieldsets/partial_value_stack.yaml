@@ -3,11 +3,14 @@ create_title: Home
 hide: true
 taxonomies: false
 fields:
+  value_stack_section:
+    type: section
+    display: Value Stack
   value_stack:
     type: grid
     instructions: What the company offers
     mode: stacked
-    display: Value Stack
+    display: Items
     fields:
       heading:
         type: text
@@ -17,3 +20,11 @@ fields:
         type: assets
         container: main
         max_files: 1
+      button_text:
+        type: text
+        display: Button Text
+        width: 50
+      button_url:
+        type: text
+        display: Button URL
+        width: 50

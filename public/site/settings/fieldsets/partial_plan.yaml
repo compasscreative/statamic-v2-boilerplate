@@ -1,12 +1,20 @@
-title: 'Partial: Value Stack'
+title: 'Partial: Plan'
 create_title: Home
 hide: true
 taxonomies: false
 fields:
+  plan_section:
+    type: section
+    display: Plan
   plan_heading:
     type: text
+    display: Heading
+  plan_subheading:
+    type: text
+    display: Subheading
   plan_steps:
     type: grid
+    display: Steps
     instructions: How to get it
     mode: stacked
     fields:

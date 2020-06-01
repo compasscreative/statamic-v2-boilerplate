@@ -1,31 +1,30 @@
-<header class="py-8 {{ bg_color or 'bg-grey-100' }} bg-cover bg-center lazyload"
+<header class="section-pad-lg text-white  bg-cover bg-center lazyload"
     {{ assets:banner }}data-bg="{{ glide:id preset="xl" }}"{{ /assets:banner }}
     >
 
-    <div class="container font-display">
+    <div class="container font-display cascade-children">
         {{ if pre_heading }}
             {{ if pre_heading_link }}
-                <a class="no-underline text-green hover:text-green-300" href="{{ pre_heading_link }}">
+                <a class="no-underline text-green hover:text-green-300 fade-in" href="{{ pre_heading_link }}">
             {{ /if }}
-            <h1 class="text-base uppercase text-green-400">{{ pre_heading }}</h1>
+            <h1 class="text-base uppercase text-green-400 fade-in">{{ pre_heading }}</h1>
             {{ if pre_heading_link }}
                 </a>
             {{ /if }}
         {{ /if }}
 
-        <{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }} class="text-6xl leading-tight font-distressed" itemprop="title">
+        <{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }} class="text-4xl lg:text-5xl font-bold mb-4 leading-tight fade-in" itemprop="title">
             {{ heading or title }}
         </{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }}>
 
-        {{ intro | markdown wrap:div.leadin }}
+        {{ intro | markdown | wrap:div.leadin.fade-in }}
 
         {{ if call_to_action_url }}
-            <div class="pt-8 fade-in animation-delay-750 relative z-40">
+            <div class="pt-8 fade-in">
                 {{ partial:button
                     :p_link="call_to_action_url"
                     :p_text="call_to_action_text"
                     p_styles="smooth-scroll"
-                    p_hollow="true"
                 }}
             </div>
         {{ /if }}
