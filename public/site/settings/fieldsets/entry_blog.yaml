@@ -9,12 +9,24 @@ fields:
     container: main
     folder: blog
     max_files: 1
-  blog_post_summary:
-    type: markdown
+  category:
+    type: text
+  intro:
+    type: redactor
     display: Summary
     instructions: A short paragraph to show on the blog listing page
-    folder: blog
-
+  images:
+    type: grid
+    display: Images
+    fields:
+      url:
+        type: assets
+        container: main
+        display: Image
+        max_files: 1
+      alt:
+        type: text
+        display: alt
   staff_author:
     max_items: '1'
     collection:
@@ -32,8 +44,7 @@ fields:
     width: 50
     display: 'Guest Author URL'
     instructions: 'Link to website of guest author'
-
-  content:
+  body:
     type: partial
     display: Content
     fieldset: partial_content_bard

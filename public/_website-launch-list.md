@@ -2,21 +2,27 @@
 
 Please review the below upon launch of any website. Change the - N - to - N - once completed.
 
-- N - Review Domain Name
+- Y - Review Domain Name
+- Y - Save all content on production back to repo
+- N - Add account to [Compass Hosting & Domains spreadsheet](https://docs.google.com/spreadsheets/d/12b5GqLTY786mWfziAG9kO49Oouafix3dRkh2LHzxxEU/edit#gid=1679013529)
 
 ## Accounts
 
-- N - Setup Mail delivery account (usually Postmark)
+- Y - Setup Mail delivery account (usually Postmark)
 - N - Setup Google Search Console
 - N - Submit [sitemap](https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190) to webmaster tools
+- N - Setup Google Tag Manger
+- N - Sentry for JavaScript bug tracking
+- N - Setup Hotjar
+- N - Setup Hotjar Funnels, Forms and Heatmaps
+- N - Add domain to uptimerobot.com
+
+## Analytics
 - N - Install Google Analytics
 - N - Add CRM domain to Google Analytics (referral exclusion list)[https://gaconnector.com/blog/eliminate-webto-salesforce-com-referral-google-analytics/]
 - N - Setup appropriate Google Analytics Events
 - N - Relevant IP addresses have been excluded from analytics tracking. Compass office is 72.38.112.218
-- N - Setup Google Tag Manger
-- N - Setup Hotjar
-- N - Setup Hotjar Funnels, Forms and Heatmaps
-- N - Add domain to uptimerobot.com
+- N - Enable PageView tracking in GTM / Analytics
 
 ## Control panel
 - N - Customize control panel login page
@@ -41,8 +47,7 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 - N - Make sure all assets are compressed an minified
 - N - Optimize images, transparent pngs can be reduced with ImageAlpha.app
 - N - CMS contains helpful instructions
-- N - CMS contains size instructions for images
-- N - Form error messages are functioning properly (often rely on require for browser, non-js method)
+- N - Form error messages are functioning properly (often rely on require for browser, non-js method)ain.
 
 ## Programming
 
@@ -107,8 +112,6 @@ Please review the below upon launch of any website. Change the - N - to - N - on
 - N - Run [Mobility Test](https://www.google.ca/webmasters/tools/mobile-friendly/)
 - N - Check for Broken Links [Link Checker](http://validator.w3.org/checklink)
 - N - Run Site grade using [pingdom](http://tools.pingdom.com)
-- N - Run [SEO redirect test](http://www.ragepank.com/redirect-check/)
-- N - Run [DNS check](http://intodns.com)
 - N - Run [accessibility check](http://achecker.ca/checker/index.php)
 - N - Run [duplicate copy check](http://www.copyscape.com)
 

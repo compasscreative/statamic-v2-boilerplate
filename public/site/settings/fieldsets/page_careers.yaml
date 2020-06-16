@@ -28,7 +28,6 @@ sections:
         container: main
         folder: /gallery
         max_files: 4
-
   options:
     display: Options
     fields:
@@ -39,7 +38,3 @@ sections:
         type: partial
         display: 'Search & Social'
         fieldset: partial_search_and_social
-      show_in_nav:
-        type: partial
-        display: Show in Nav
-        fieldset: partial_show_in_nav

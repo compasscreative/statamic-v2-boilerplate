@@ -16,13 +16,14 @@ routes:
     template: blog-archive
     title: Blog Archive
 collections:
-  blog: '/blog/{year}/{month}/{day}/{slug}'
+  blog: '/blog/{slug}'
   careers: '/careers/{slug}'
   employee: '/team/{slug}'
   products: '/products/{slug}'
   projects: '/projects/{slug}'
+  posts: '/posts/{slug}'
 taxonomies:
   tags: '/blog/tags/{slug}'
   categories: '/blog/categories/{slug}'
-redirect: []
-vanity: []
+redirect: [ ]
+vanity: [ ]

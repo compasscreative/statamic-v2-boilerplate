@@ -1,18 +1,3 @@
 <!-- type: {{type}} -->
-{{ if is_full_size == true }}
-<section
-    class="w-full px-2 md:px-6 py-8 sm:py-24 bg-grey-12 bg-blend-multiply text-center bg-cover bg-no-repeat lozad mt-10 lg:mt-20 mx-auto"
-    data-background-image="/assets/general/bg-flowers-light.jpg">
-{{ else }}
-<section class="max-w-xl mt-8 mb-16 m-auto">
-{{ /if }}
-    <div class="mx-auto max-w-4xl">
-        {{ if gallery_title }}<h3 class="headline-2 mb-4 max-w-xl mx-auto">{{ gallery_title }}</h3>{{ /if }}
-        {{ if gallery_desc }}{{ gallery_desc | wrap:div.text-lg.max-w-xl.mx-auto.mb-4 | markdown }}{{ /if }}
-        <div id="gallery-{{ index }}"
-            class="grid-layout {{ if is_full_size == true }}mt-6{{ else }}grid-layout-sm{{ /if }}"
-            data-responsive="{{ glide:value width="600" }} 600, {{ glide:value width="800" }} 800, {{ glide:value width="1200" }} 1200, {{ glide:value width="1600" }} 1600">
-            {{ partial:gallery_images }}
-        </div>
-    </div>
-</section>
+
+{{ partial:gallery}}

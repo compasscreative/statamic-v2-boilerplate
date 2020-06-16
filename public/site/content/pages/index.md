@@ -1,21 +1,11 @@
-banner: /uploads/place-holders/pexels-photo.jpg
-pre_heading: Pre heading goes here
-heading: You can do it, and we can help!
-intro: >
-  Fusce efficitur, nisi vel feugiat congue, dolor ipsum venenatis ex, eget gravida nulla libero sed
-  metus. Mauris ac ullamcorper massa. Nullam venenatis ipsum a feugiat tincidunt. Praesent facilisis
-  odio leo, quis consectetur tortor congue vel.
-call_to_action: Request a Quote
+heading: Experience a new standard in landscape management.
+intro: Keep your landscape clean, safe and beautiful with four-season commercial property care.
+call_to_action_text: Get Started
+call_to_action_url: '#contact'
 value_stack:
   -
-    heading: Value one
-    copy: >
-      Duis eu massa non augue euismod sagittis eget quis lacus. Integer iaculis viverra mi eu consequat.
-      In hac habitasse platea dictumst. Pellentesque ultricies ante eget lacus rhoncus consectetur.
-      Aliquam pharetra condimentum neque ac posuere. Duis rutrum egestas lacus, vel auctor tellus mattis
-      ut. Maecenas ut ante in eros commodo bibendum quis eget enim. Maecenas et semper risus, quis iaculis
-      dui. Nulla ac mi mauris. Donec mattis, erat ac laoreet scelerisque, enim nisi pellentesque lectus,
-      sit amet posuere purus felis ac tortor.
+    heading: Four-season landscape management.
+    copy: 'Choose one company to look after every detail of your commercial property and stop worrying about managing multiple trades. ND gives you access to landscape maintenance, snow & ice management and tree care… all under one roof.'
   -
     heading: Value two
     copy: >
@@ -46,6 +36,7 @@ plan_steps:
     copy: Sed sed eros ex. Nunc fringilla magna erat.
 show_in_main_nav: false
 show_in_footer_nav: true
+call_to_action: Request a Quote
 gallery:
   - /uploads/gallery//adult-background-beard-941693.jpg
   - /uploads/gallery//black-and-white-blur-child-573262.jpg
@@ -66,5 +57,5 @@ parent_page_content: >
   mattis est a scelerisque.
 title: Home
 fieldset: page_home
-id: db0ae4e3-4f10-4802-bc40-0b880cbf02c7
 template: home
+id: db0ae4e3-4f10-4802-bc40-0b880cbf02c7

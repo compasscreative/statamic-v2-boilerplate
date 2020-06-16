@@ -3,4 +3,6 @@ const init = () => {
   loadFormLabels();
 };
 
-init();
+document.addEventListener('DOMContentLoaded', function() {
+  init();
+});

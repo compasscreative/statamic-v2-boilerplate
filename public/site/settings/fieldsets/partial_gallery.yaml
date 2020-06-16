@@ -8,7 +8,13 @@ sections:
       section_gallery:
         type: section
         display: 'Gallery'
-      gallery:
+      gallery_heading:
+        type: text
+        display: Heading
+      gallery_subheading:
+        type: text
+        display: Sub Heading
+      gallery_images:
         type: assets
         display: Images
         container: main

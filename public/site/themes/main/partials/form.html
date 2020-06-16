@@ -24,6 +24,12 @@
         </script>
         {{ /if }}
 
+        {{ if success }}
+        <div class="border p-8">
+            Form was submitted successfully.
+        </div>
+        {{ /if }}
+
         {{ form:create redirect="{{ p_redirect or 'contact/thank-you' }}" files="true" attr="class:contact-form__form"}}
 
         <ul class="max-w-xl mx-auto text-black">
@@ -76,7 +82,7 @@
                     {{ elseif type=="textarea" }}
 
                     {{ partial:form_label p_display="{{ display }}" p_for="{{ field }}" }}
-                    <textarea data-gramm_editor="false" class="js-form-input p-3 h-40 w-full placeholder-blue" name="{{ field }}" id="{{ field }}" placeholder="{{ display }}" data-placeholder="{{ display }}" >{{ old }}</textarea>
+                    <textarea data-gramm_editor="false" class="js-form-input p-3 h-40 w-full placeholder-blue-400 border-2" name="{{ field }}" id="{{ field }}" placeholder="{{ display }}" data-placeholder="{{ display }}" >{{ old }}</textarea>
 
                     {{ else }}
 
@@ -107,12 +113,6 @@
             </li>
 
         </ul>
-
-        {{ if success }}
-        <div class="contact-form__success">
-            Form was submitted successfully.
-        </div>
-        {{ /if }}
 
         {{ /form:create }}
 

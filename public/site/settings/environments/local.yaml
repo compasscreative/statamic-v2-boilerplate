@@ -3,7 +3,7 @@ settings:
     stache_always_update: true
   debug:
     debug: true
-    debug_bar: false
+    debug_bar: true
   system:
     locales:
       en:

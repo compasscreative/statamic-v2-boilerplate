@@ -12,15 +12,15 @@ transition-all
 
 {{ if p_hollow }}
   border
-  border-{{ p_hollow_color or 'green' }}
-  text-{{ p_hollow_color or 'green' }}
+  border-{{ p_hollow_color or 'green-400' }}
+  text-{{ p_hollow_color or 'green-400' }}
   hover:border-white
   hover:text-white
 {{ else }}
-  bg-green
+  bg-green-500
   text-white
-  hover:bg-green-active
-  focus:bg-green-active
+  hover:bg-green-400
+  focus:bg-green-400
 {{ /if }}
 
 {{ p_styles }}

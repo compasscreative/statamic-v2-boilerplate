@@ -1,33 +1,34 @@
-<header class="py-8 {{ bg_color or 'bg-grey-100' }} bg-cover bg-center lozad"
-    {{ assets:banner }}data-background-image="{{ glide:id preset="xl" }}"{{ /assets:banner }}
+<header class="section-pad-lg text-white  bg-cover bg-center lazyload"
+    {{ assets:banner }}data-bg="{{ glide:id preset="xl" }}"{{ /assets:banner }}
     >
 
-    <div class="container">
+    <div class="container font-display cascade-children">
         {{ if pre_heading }}
             {{ if pre_heading_link }}
-                <a class="no-underline hover:text-blue" href="{{ pre_heading_link }}">
+                <a class="no-underline text-green hover:text-green-300 fade-in" href="{{ pre_heading_link }}">
             {{ /if }}
-            <h1 class="text-base">{{ pre_heading }}</h1>
+            <h1 class="text-base uppercase text-green-400 fade-in">{{ pre_heading }}</h1>
             {{ if pre_heading_link }}
                 </a>
             {{ /if }}
         {{ /if }}
 
-        <{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }} class="text-6xl leading-tight font-distressed">
+        <{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }} class="text-4xl lg:text-5xl font-bold mb-4 leading-tight fade-in" itemprop="title">
             {{ heading or title }}
         </{{ if pre_heading=='' }}h1{{ else }}h2{{ /if }}>
 
-        {{ intro | markdown wrap:div.leadin }}
+        {{ intro | markdown | wrap:div.leadin.fade-in }}
 
-        {{ if call_to_action }}
-            <div class="pt-8">
+        {{ if call_to_action_url }}
+            <div class="pt-8 fade-in">
                 {{ partial:button
-                    p_link="{{ if link }}{{ relate:link }}{{ url }}{{ /relate:link }}{{ elseif slug=="careers" }}#positions{{ else }}#contact-form{{ /if }}"
-                    p_text="{{ call_to_action }}"
+                    :p_link="call_to_action_url"
+                    :p_text="call_to_action_text"
                     p_styles="smooth-scroll"
                 }}
             </div>
         {{ /if }}
+
     </div>
 
 </header>

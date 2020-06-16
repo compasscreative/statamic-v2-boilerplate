@@ -40,7 +40,7 @@
 
         {{ partial:header }}
 
-        <main id="maincontent">
+        <main id="app">
             <div id="swup">
                 {{ template_content }}
             </div>
@@ -48,7 +48,20 @@
 
         {{ partial:footer }}
 
-        <link rel="stylesheet" href="https://unpkg.com/gutenberg-css@0.4" media="print">
+        <!-- Polyfill -->
+        <script>
+            if (window.NodeList && !NodeList.prototype.forEach) {
+                NodeList.prototype.forEach = function(callback, thisArg) {
+                    thisArg = thisArg || window;
+                    for (var i = 0; i < this.length; i++) {
+                    callback.call(thisArg, this[i], i, this);
+                    }
+                };
+            }
+        </script>
+
+        {{ theme:js src="vendor.js" cache_bust="true" tag="true" }}
+        {{ theme:js cache_bust="true" tag="true" }}
 
         {{#
             Photoswipe gallery html loads below

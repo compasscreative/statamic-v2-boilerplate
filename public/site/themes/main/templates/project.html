@@ -1,14 +1,22 @@
 {{ partial:hero }}
 
-{{ partial:content_blocks }}
+<div class="container">
+    {{ partial:content_blocks }}
+</div>
 
 <div class="container">
 
     {{ partial:sets/gallery }}
 
-    <aside class="text-center">
-        <h2>Other Projects</h2>
-        {{ partial:list_projects limit="2" sort="title" }}
-    </aside>
-
 </div>
+
+<div class="flex space-between bg-gray-100 container">
+    {{ collection:previous in="projects" limit="1" :slug="slug" wrap="true" }}
+    <a href="{{ url }}">⬅ Previous</a>
+    {{ /collection:previous }}
+    {{ collection:next in="projects" limit="1" :slug="slug" wrap="true" }}
+    <a class="ml-auto" href="{{ url }}">Next ➡</a>
+    {{ /collection:next}}
+</div>
+
+{{ partial:form }}

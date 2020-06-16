@@ -9,11 +9,12 @@
         "prod": "npm run production",
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
-    "devDependencies": {
-        "@babel/core": "^7.6.4",
-        "@babel/preset-env": "^7.6.3",
+    "dependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.6",
         "@swup/debug-plugin": "^1.0.3",
         "@swup/fade-theme": "^1.0.5",
+        "@swup/ga-plugin": "^1.0.1",
         "@swup/gtm-plugin": "^1.0.2",
         "@swup/preload-plugin": "^1.0.3",
         "@swup/scroll-plugin": "^1.0.6",
@@ -24,8 +25,6 @@
         "browser-sync-webpack-plugin": "*",
         "cross-env": "^6.0.3",
         "css-loader": "^2.1.1",
-        "headroom.js": "^0.10.3",
-        "jquery": "^3.4.1",
         "laravel-mix": "^4.1.4",
         "laravel-mix-purgecss": "^4.2.0",
         "lazysizes": "^5.1.2",
@@ -33,21 +32,13 @@
         "postcss": "^7.0.18",
         "postcss-color-function": "^4.1.0",
         "postcss-import": "^12.0.1",
-        "postcss-nested": "^4.2.1",
+        "postcss-nesting": "^7.0.1",
         "resolve-url-loader": "^3.1.0",
-        "sass": "^1.23.0",
-        "sass-loader": "^7.3.1",
         "swup": "^2.0.7",
-        "tailwindcss": "^1.1.2",
+        "tailwindcss": "*",
         "tailwindcss-aspect-ratio": "^2.0.0",
-        "tailwindcss-grid": "^1.2.1",
-        "tailwindcss-transitions": "^2.1.0",
-        "vue-template-compiler": "^2.6.10",
-        "webpack": "^4.41.2"
-    },
-    "dependencies": {
-        "laravel-mix-postcss-config": "^1.0.2",
-        "npm": "^6.9.0"
+        "webpack": "^4.41.2",
+        "rellax": "^1.10.0"
     },
     "name": "compass-creative",
     "version": "1.0.0",
@@ -68,5 +59,6 @@
     "bugs": {
         "url": "https://github.com/compasscreative/compass-creative/issues"
     },
-    "homepage": "https://github.com/compasscreative/compass-creative#readme"
+    "homepage": "https://github.com/compasscreative/compass-creative#readme",
+    "devDependencies": {}
 }

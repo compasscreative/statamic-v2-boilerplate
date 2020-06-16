@@ -6,7 +6,9 @@
 
         {{ partial:content_blocks }}
 
-        {{ partial:gallery_images }}
+        {{ if gallery_images }}
+        {{ partial:gallery }}
+        {{ /if }}
 
         <aside class="text-center">
             <h2>Other products</h2>

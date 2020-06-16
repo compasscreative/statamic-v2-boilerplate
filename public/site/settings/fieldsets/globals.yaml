@@ -27,11 +27,6 @@ fields:
   primary_postal_code:
     type: text
     display: Postal Code
-  email_customer_message:
-    type: markdown
-    display: Email customer message
-    instructions: This is the message that will be automatically sent by email to customers who submit a contact form.
-    cheatsheet: true
   office_hours:
     type: grid
     display: Office Hours
