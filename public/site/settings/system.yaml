@@ -2,7 +2,7 @@ locales:
   en:
     full: en_US
     name: English
-    url: http://statamic-starterkit.test
+    url: http://statamic-boilerplate.test
 timezone: America/Toronto
 date_format: F jS, Y
 default_extension: md
