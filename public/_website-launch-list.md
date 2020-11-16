@@ -2,15 +2,15 @@
 
 Please review the below upon launch of any website. Change the - N - to - N - once completed.
 
-- Y - Review Domain Name
-- Y - Save all content on production back to repo
+- N - Review Domain Name
+- N - Save all content on production back to repo
 - N - Add account to [Compass Hosting & Domains spreadsheet](https://docs.google.com/spreadsheets/d/12b5GqLTY786mWfziAG9kO49Oouafix3dRkh2LHzxxEU/edit#gid=1679013529)
 
 ## Accounts
 
-- Y - Setup Mail delivery account (usually Postmark)
+- N - Setup Mail delivery account (usually Postmark)
 - N - Setup Google Search Console
-- N - Submit [sitemap](https://support.google.com/webmasters/answer/183668?hl=en&ref_topic=4581190) to webmaster tools
+- N - Submit [sitemap](https://search.google.com/search-console) to webmaster tools
 - N - Setup Google Tag Manger
 - N - Sentry for JavaScript bug tracking
 - N - Setup Hotjar
