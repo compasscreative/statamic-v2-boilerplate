@@ -21,7 +21,7 @@
         "acorn": "^8.2.2",
         "babel-preset-env": "*",
         "babel-preset-react": "*",
-        "browser-sync": "^2.26.14",
+        "browser-sync": "^2.27.10",
         "browser-sync-webpack-plugin": "*",
         "cross-env": "^7.0.3",
         "css-loader": "^5.2.4",
